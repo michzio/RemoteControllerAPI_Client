@@ -1,7 +1,11 @@
-#include<stdio.h>
+/*
+ * Created by Michal Ziobro on 21/07/2016.
+ */
+#include "client.h"
+#include <stdio.h>
 
-int main(int argc, char **argv) {
+int start_client(void) {
 
-    printf("Client - mobile side, remotely controlling.\n");
-    return 0;
+    printf("Starting new client...\n");
+    return SUCCESS;
 }

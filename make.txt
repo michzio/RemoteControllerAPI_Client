@@ -15,7 +15,11 @@ TARGET = client
 
 all: $(TARGET)
 
-$(TARGET): client.c
-	$(CC) $(CFLAGS) -o client client.c 
+$(TARGET): client.o
+	$(CC) $(CFLAGS) -o client main.c client.o
+
+client.o: client.c client.h
+	$(CC) $(CFLAGS) -c client.c
+
 clean:
-	$(RM) $(TARGET)
+	$(RM) $(TARGET) $(TARGET).o
