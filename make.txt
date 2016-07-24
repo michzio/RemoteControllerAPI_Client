@@ -8,18 +8,22 @@ CC = gcc
 # -Wall turn on all warnings 
 # -D__USE_FIXED_PROTOTYPES__  force the compiler to use the correct headers 
 # -ansi don’t use GNU extensions, stick to ANSI
-CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -ansi
+# -std=c99 use newer version
+CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99 
 
 # the build target executable: 
 TARGET = client
 
 all: $(TARGET)
 
-$(TARGET): client.o
-	$(CC) $(CFLAGS) -o client main.c client.o
+$(TARGET): client.o helper.o
+	$(CC) $(CFLAGS) -o client main.c client.o helper.o
 
 client.o: client.c client.h
 	$(CC) $(CFLAGS) -c client.c
+
+helper.o: helper.c helper.h
+	$(CC) $(CFLAGS) -c helper.c
 
 clean:
 	$(RM) $(TARGET) $(TARGET).o
