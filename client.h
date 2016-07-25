@@ -5,13 +5,13 @@
 #ifndef REMOTECONTROLLERAPI_CLIENT_CLIENT_H
 #define REMOTECONTROLLERAPI_CLIENT_CLIENT_H
 
-#include "common/helper.h"
+#include "common/address_helper.h"
 
-#define PORT "2016" // the port remote controller client will be connecting to
-#define ADDRESS "192.168.8.106"
+#define RPC_PORT "2016" // the port remote controller client will be connecting to for remote procedure calls
+#define EVENT_PORT "2017" // the port remote controller client will be connecting to for event handling
+#define SERVER_ADDRESS "192.168.8.106"
 
 result_t start_client(void);
-int handle_communication(int cs_fd);
 int end_client(void);
 result_t echo(int cs_fd);
 

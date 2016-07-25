@@ -16,8 +16,8 @@ TARGET = client
 
 all: $(TARGET)
 
-$(TARGET): client.o helper.o conn_socket.o
-	$(CC) $(CFLAGS) -o client main.c client.o conn_socket.o helper.o
+$(TARGET): client.o conn_socket.o connection.o stream.o service.o address_helper.o io_helper.o
+	$(CC) $(CFLAGS) -o client main.c client.o conn_socket.o connection.o stream.o service.o address_helper.o io_helper.o
 
 client.o: client.c client.h
 	$(CC) $(CFLAGS) -c client.c
@@ -25,8 +25,20 @@ client.o: client.c client.h
 conn_socket.o: networking/conn_socket.c networking/conn_socket.h
 	$(CC) $(CFLAGS) -c networking/conn_socket.c
 
-helper.o: common/helper.c common/helper.h
-	$(CC) $(CFLAGS) -c common/helper.c
+connection.o: networking/connection.c networking/connection.h
+	$(CC) $(CFLAGS) -c networking/connection.c
+
+stream.o: networking/stream.c networking/stream.h
+	$(CC) $(CFLAGS) -c networking/stream.c 
+
+service.o: networking/service.c networking/service.h
+	$(CC) $(CFLAGS) -c networking/service.c 
+
+address_helper.o: common/address_helper.c common/address_helper.h
+	$(CC) $(CFLAGS) -c common/address_helper.c
+
+io_helper.o: common/io_helper.c common/io_helper.h
+	$(CC) $(CFLAGS) -c common/io_helper.c
 
 clean:
 	$(RM) $(TARGET) $(TARGET).o

@@ -2,7 +2,6 @@
 #include <pthread.h>
 
 #include<stdio.h>
-#include <string.h>
 #include "client.h"
 
 int main(int argc, char **argv) {
@@ -14,5 +13,5 @@ int main(int argc, char **argv) {
         return FAILURE;
     }
 
-    return 0;
+    return SUCCESS;
 }

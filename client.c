@@ -6,18 +6,14 @@
 #include <unistd.h>
 #include <netdb.h>
 #include "client.h"
-#include "networking/conn_socket.h"
+#include "networking/stream.h"
 
 result_t start_client(void) {
 
+    echo_stream();
+
     return SUCCESS;
 
-}
-
-
-int handle_communication(int cs_fd) {
-
-    return echo(cs_fd);
 }
 
 int end_client(void) {
