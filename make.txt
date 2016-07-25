@@ -16,14 +16,17 @@ TARGET = client
 
 all: $(TARGET)
 
-$(TARGET): client.o helper.o
-	$(CC) $(CFLAGS) -o client main.c client.o helper.o
+$(TARGET): client.o helper.o conn_socket.o
+	$(CC) $(CFLAGS) -o client main.c client.o conn_socket.o helper.o
 
 client.o: client.c client.h
 	$(CC) $(CFLAGS) -c client.c
 
-helper.o: helper.c helper.h
-	$(CC) $(CFLAGS) -c helper.c
+conn_socket.o: networking/conn_socket.c networking/conn_socket.h
+	$(CC) $(CFLAGS) -c networking/conn_socket.c
+
+helper.o: common/helper.c common/helper.h
+	$(CC) $(CFLAGS) -c common/helper.c
 
 clean:
 	$(RM) $(TARGET) $(TARGET).o

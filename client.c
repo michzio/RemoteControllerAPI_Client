@@ -5,56 +5,46 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <netdb.h>
-#include <string.h>
 #include "client.h"
-#include "helper.h"
+#include "networking/conn_socket.h"
 
-int start_client(void) {
-
-    int cs_fd; // connection socket file descriptor
-
-    printf("Starting new client...\n");
-
-    if(create_connection_socket(&cs_fd) == FAILURE) {
-        fprintf(stderr, "create_connection_socket: failed!\n");
-        return FAILURE;
-    }
-
-    handle_communication(cs_fd);
-
-    close(cs_fd);
+result_t start_client(void) {
 
     return SUCCESS;
+
 }
 
-result_t create_connection_socket(int *res_fd) {
 
-    int cs_fd; // connection socket file descriptor
-    struct addrinfo addrinfo_hints, *addrinfo_res, *ai_ptr; // address info structures holding server address information
-    int gai_res; // getaddrinfo() result value
-
-    // populating address info hints for getaddrinfo()
-    memset(&addrinfo_hints, 0, sizeof(addrinfo_hints));
-    addrinfo_hints.ai_family = AF_UNSPEC;
-    addrinfo_hints.ai_socktype = SOCK_STREAM;
-
-    // getting result address info structure
-    if( (gai_res = getaddrinfo(ADDRESS, PORT, &addrinfo_hints, &addrinfo_res)) != 0 ) {
-        fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(gai_res));
-        return FAILURE;
-    }
-
-    // loop through address info results and connect to the first we can
-
-
-    return SUCCESS;
-}
 int handle_communication(int cs_fd) {
 
-    return SUCCESS;
+    return echo(cs_fd);
 }
 
 int end_client(void) {
+
+    return SUCCESS;
+}
+
+result_t echo(int cs_fd) {
+
+    char sbuf[] = "Hello, world!";
+    char rbuf[100];
+    int n_sent; // number of bytes sent
+    int n_recv; // number of bytes received
+
+    if( (n_sent = send(cs_fd, sbuf, sizeof(sbuf), 0)) < 0) {
+        perror("send");
+        return FAILURE;
+    }
+
+    if( (n_recv = recv(cs_fd, rbuf, sizeof(rbuf) -1, 0)) < 0) {
+        perror("recv");
+        return FAILURE;
+    }
+
+    rbuf[n_recv] = '\0';
+
+    printf("client: received '%s'\n", rbuf);
 
     return SUCCESS;
 }

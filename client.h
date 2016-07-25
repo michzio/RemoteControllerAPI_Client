@@ -5,14 +5,14 @@
 #ifndef REMOTECONTROLLERAPI_CLIENT_CLIENT_H
 #define REMOTECONTROLLERAPI_CLIENT_CLIENT_H
 
-#include "helper.h"
+#include "common/helper.h"
 
 #define PORT "2016" // the port remote controller client will be connecting to
-#define ADDRESS "localhost"
+#define ADDRESS "192.168.8.106"
 
-int start_client(void);
-result_t create_connection_socket(int *res_fd);
+result_t start_client(void);
 int handle_communication(int cs_fd);
 int end_client(void);
+result_t echo(int cs_fd);
 
 #endif /* REMOTECONTROLLERAPI_CLIENT_CLIENT_H */
