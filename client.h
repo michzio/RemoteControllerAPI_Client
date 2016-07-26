@@ -13,6 +13,5 @@
 
 result_t start_client(void);
 int end_client(void);
-result_t echo(int cs_fd);
 
 #endif /* REMOTECONTROLLERAPI_CLIENT_CLIENT_H */
