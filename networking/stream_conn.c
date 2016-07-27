@@ -3,12 +3,12 @@
 //
 
 #include <stdio.h>
-#include "stream.h"
+#include "stream_conn.h"
 #include "connection.h"
 #include "../client.h"
 #include "service.h"
 
-result_t rpc_stream(void) {
+result_t rpc_stream_conn(void) {
 
     if(create_stream_conn(SERVER_ADDRESS, RPC_PORT, rpc_service_handler) == FAILURE) {
         fprintf(stderr, "create_stream_conn: failed!\n");
@@ -18,7 +18,7 @@ result_t rpc_stream(void) {
     return SUCCESS;
 }
 
-result_t event_stream(void) {
+result_t event_stream_conn(void) {
 
     if(create_stream_conn(SERVER_ADDRESS, EVENT_PORT, event_service_handler) == FAILURE) {
         fprintf(stderr, "create_stream_conn: failed!\n");
@@ -28,9 +28,9 @@ result_t event_stream(void) {
     return SUCCESS;
 }
 
-result_t echo_stream(void) {
+result_t echo_stream_conn(void) {
 
-    if(create_stream_conn(SERVER_ADDRESS, RPC_PORT, echo_service_handler) == FAILURE) {
+    if(create_stream_conn(SERVER_ADDRESS, ECHO_PORT, echo_service_handler) == FAILURE) {
         fprintf(stderr, "create_stream_conn: failed!\n");
         return FAILURE;
     }

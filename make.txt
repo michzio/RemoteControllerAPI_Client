@@ -16,8 +16,8 @@ TARGET = client
 
 all: $(TARGET)
 
-$(TARGET): client.o conn_socket.o connection.o service.o stream.o address_helper.o io_helper.o
-	$(CC) $(CFLAGS) -o client main.c client.o conn_socket.o connection.o service.o stream.o address_helper.o io_helper.o
+$(TARGET): client.o conn_socket.o connection.o datagram_conn.o service.o stream_conn.o address_helper.o io_helper.o
+	$(CC) $(CFLAGS) -o client main.c client.o conn_socket.o connection.o datagram_conn.o service.o stream_conn.o address_helper.o io_helper.o
 
 client.o: client.c client.h
 	$(CC) $(CFLAGS) -c client.c
@@ -28,11 +28,14 @@ conn_socket.o: networking/conn_socket.c networking/conn_socket.h
 connection.o: networking/connection.c networking/connection.h
 	$(CC) $(CFLAGS) -c networking/connection.c
 
+datagram_conn.o: networking/datagram_conn.c networking/datagram_conn.h
+	$(CC) $(CFLAGS) -c networking/datagram_conn.c
+
 service.o: networking/service.c networking/service.h
 	$(CC) $(CFLAGS) -c networking/service.c
 
-stream.o: networking/stream.c networking/stream.h
-	$(CC) $(CFLAGS) -c networking/stream.c
+stream_conn.o: networking/stream_conn.c networking/stream_conn.h
+	$(CC) $(CFLAGS) -c networking/stream_conn.c
 
 address_helper.o: common/address_helper.c common/address_helper.h
 	$(CC) $(CFLAGS) -c common/address_helper.c
@@ -41,4 +44,4 @@ io_helper.o: common/io_helper.c common/io_helper.h
 	$(CC) $(CFLAGS) -c common/io_helper.c
 
 clean:
-	$(RM) $(TARGET) $(TARGET).o conn_socket.o connection.o service.o stream.o address_helper.o io_helper.o
+	$(RM) $(TARGET) $(TARGET).o conn_socket.o connection.o datagram_conn.o service.o stream.o address_helper.o io_helper.o

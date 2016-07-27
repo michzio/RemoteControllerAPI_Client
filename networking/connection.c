@@ -10,7 +10,7 @@ static result_t create_conn(const char*addr, const char *port, create_conn_sock_
 
     int cs_fd; // connection socket file descriptor
 
-    printf("Creating new stream connection...\n");
+    printf("Creating new connection...\n");
 
     if(create_conn_sock(addr, port, &cs_fd) == FAILURE) {
         fprintf(stderr, "create_conn_sock: failed!\n");

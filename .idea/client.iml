@@ -8,15 +8,17 @@
       <sourceFolder url="file://$MODULE_DIR$/common/io_helper.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/common/io_helper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/client.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/client.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/networking/service.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/networking/datagram_conn.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/networking/conn_socket.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/networking/service.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/networking/stream.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/networking/conn_socket.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/networking/stream_conn.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/networking/connection.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/networking/stream.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/networking/datagram_conn.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/networking/connection.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/networking/service.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/networking/stream_conn.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/client.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

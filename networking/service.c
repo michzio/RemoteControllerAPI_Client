@@ -32,6 +32,11 @@ result_t echo_service_handler(sock_fd_t sock_fd) {
         // read input from console
         char *input = read_line();
 
+        if(strlen(input) == 0) {
+            fprintf(stderr, "empty input!\n");
+            continue;
+        }
+
         if(strcmp(input, "q") == 0) break;
 
         printf("client: console input '%s'\n", input);

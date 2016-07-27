@@ -6,11 +6,13 @@
 #include <unistd.h>
 #include <netdb.h>
 #include "client.h"
-#include "networking/stream.h"
+#include "networking/stream_conn.h"
+#include "networking/datagram_conn.h"
 
 result_t start_client(void) {
 
-    echo_stream();
+    // echo_stream_conn();
+    echo_datagram_conn();
 
     return SUCCESS;
 
