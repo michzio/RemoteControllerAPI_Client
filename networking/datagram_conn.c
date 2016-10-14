@@ -10,7 +10,7 @@
 
 result_t echo_datagram_conn(void) {
 
-    if(create_datagram_conn(SERVER_ADDRESS, RPC_PORT, echo_service_handler) == FAILURE) {
+    if(create_datagram_conn(SERVER_ADDRESS, ECHO_PORT, echo_service_handler) == FAILURE) {
         fprintf(stderr, "create_datagram_conn: failed!\n");
         return FAILURE;
     }

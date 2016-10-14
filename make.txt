@@ -1,7 +1,10 @@
 # Makefile for UNIX        
 
 # the compiler: gcc for C program, define as g++ for C++ 
-CC = gcc  
+CC = gcc
+
+# the static library archiver 
+AR = ar rcs  
 
 # compiler flags: 
 # -g enable debugging 
@@ -11,16 +14,29 @@ CC = gcc
 # -std=c99 use newer version
 CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99 
 
+# libraries 
+# custom 
+NETWORKING_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/networking/libnetworking.a
+COMPARERS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/libcomparers.a
+UNIT_TESTS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/libunit_tests.a
+
 # the build target executable: 
 TARGET = client
+LIBRARY = librc_client.a
+
+# source files 
+SOURCE_FILES = conn_socket.o connection.o datagram_conn.o service.o stream_conn.o client.o
+
+# test source files 
+TEST_SOURCE_FILES = test_client.o
 
 all: $(TARGET)
 
-$(TARGET): client.o conn_socket.o connection.o datagram_conn.o service.o stream_conn.o address_helper.o io_helper.o
-	$(CC) $(CFLAGS) -o client main.c client.o conn_socket.o connection.o datagram_conn.o service.o stream_conn.o address_helper.o io_helper.o
+$(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)	
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(NETWORKING_LIBRARY) $(COMPARERS_LIBRARY) $(TEST_SOURCE_FILES) $(UNIT_TESTS_LIBRARY) 
 
-client.o: client.c client.h
-	$(CC) $(CFLAGS) -c client.c
+$(LIBRARY): $(SOURCE_FILES) 
+	$(AR) $(LIBRARY) $(SOURCE_FILES)
 
 conn_socket.o: networking/conn_socket.c networking/conn_socket.h
 	$(CC) $(CFLAGS) -c networking/conn_socket.c
@@ -37,11 +53,11 @@ service.o: networking/service.c networking/service.h
 stream_conn.o: networking/stream_conn.c networking/stream_conn.h
 	$(CC) $(CFLAGS) -c networking/stream_conn.c
 
-address_helper.o: common/address_helper.c common/address_helper.h
-	$(CC) $(CFLAGS) -c common/address_helper.c
+client.o: client.c client.h
+	$(CC) $(CFLAGS) -c client.c
 
-io_helper.o: common/io_helper.c common/io_helper.h
-	$(CC) $(CFLAGS) -c common/io_helper.c
+test_client.o: test/test_client.c test/test_client.h
+	$(CC) $(CFLAGS) -c test/test_client.c
 
 clean:
-	$(RM) $(TARGET) $(TARGET).o conn_socket.o connection.o datagram_conn.o service.o stream.o address_helper.o io_helper.o
+	$(RM) $(TARGET) $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)

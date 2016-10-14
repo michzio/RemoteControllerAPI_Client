@@ -6,17 +6,17 @@
 #include <string.h>
 #include <stdlib.h>
 #include "service.h"
-#include "../common/io_helper.h"
+#include "../../networking/helpers/io_helper.h"
 
 result_t rpc_service_handler(sock_fd_t sock_fd) {
-    // TO DO
+    // TODO
 
     return 0;
 }
 
 result_t event_service_handler(sock_fd_t sock_fd) {
 
-    // TO DO
+    // TODO
 
     return 0;
 }

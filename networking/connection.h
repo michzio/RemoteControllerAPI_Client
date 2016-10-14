@@ -4,7 +4,7 @@
 #ifndef REMOTECONTROLLERAPI_CLIENT_CONNECTION_H
 #define REMOTECONTROLLERAPI_CLIENT_CONNECTION_H
 
-#include "../common/address_helper.h"
+#include "../../networking/helpers/address_helper.h"
 #include "conn_socket.h"
 
 typedef result_t (*connection_handler_t)(sock_fd_t);

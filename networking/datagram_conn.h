@@ -5,7 +5,7 @@
 #ifndef REMOTECONTROLLERAPI_CLIENT_DATAGRAM_CONN_H
 #define REMOTECONTROLLERAPI_CLIENT_DATAGRAM_CONN_H
 
-#include "../common/address_helper.h"
+#include "../../networking/helpers/address_helper.h"
 
 result_t echo_datagram_conn(void);
 
