@@ -28,7 +28,7 @@ LIBRARY = librc_client.a
 SOURCE_FILES = conn_socket.o connection.o datagram_conn.o service.o stream_conn.o client.o
 
 # test source files 
-TEST_SOURCE_FILES = test_client.o
+TEST_SOURCE_FILES = test_client.o test_transfer.o
 
 all: $(TARGET)
 
@@ -58,6 +58,9 @@ client.o: client.c client.h
 
 test_client.o: test/test_client.c test/test_client.h
 	$(CC) $(CFLAGS) -c test/test_client.c
+
+test_transfer.o: test/test_transfer.c test/test_transfer.h
+	$(CC) $(CFLAGS) -c test/test_transfer.c
 
 clean:
 	$(RM) $(TARGET) $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)
