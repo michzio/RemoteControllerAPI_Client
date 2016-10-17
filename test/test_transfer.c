@@ -268,20 +268,67 @@ static result_t png_transfer_handler(sock_fd_t sock_fd) {
     assert_equal_int(res, SUCCESS, "received PNG data from socket");
     printf(ANSI_COLOR_CYAN "png image size (%zu, %zu)\n" ANSI_COLOR_RESET, width, height);
 
-    res = fwrite_binaries("/Users/michzio/Desktop/test_client_screen_snapshot.png", pngData, pngDataLength);
+    res = (result_t) fwrite_binaries("/Users/michzio/Desktop/test_client_screen_snapshot.png", pngData, pngDataLength);
     assert_equal_int(res, SUCCESS, "PNG data saved to file");
 
     free(pngData);
+
+    return SUCCESS;
 }
 
 static void test_png_transfer(void) {
     test_create_stream_conn(png_transfer_handler);
 }
 
+static int count = 0;
+
+static result_t display_stream_transfer_handler(sock_fd_t sock_fd) {
+
+    result_t res = 0;
+    unsigned char *pngData = 0;
+    size_t pngDataLength = 0;
+    size_t width = 0, height = 0;
+
+    // get size of png frame
+    if(recv_uint32(sock_fd, &width) != SUCCESS) return FAILURE;
+    if(recv_uint32(sock_fd, &height) != SUCCESS) return FAILURE;
+    // get length of png data
+    if(recv_uint32(sock_fd, &pngDataLength) != SUCCESS) return FAILURE;
+
+    // get png data
+    pngData = (unsigned char *) malloc(sizeof(unsigned char)*pngDataLength);
+    res = recv_binary(sock_fd, PACKET_LENGTH, pngData, pngDataLength);
+    assert_equal_int(res, SUCCESS, "received PNG data from socket");
+
+    if(res != SUCCESS) return FAILURE;
+    printf(ANSI_COLOR_CYAN "png frame size (%zu, %zu)\n" ANSI_COLOR_RESET, width, height);
+
+    count++;
+    char filePath[256];
+    sprintf(filePath, "/Users/michzio/Desktop/display_stream/%d.png", count);
+    res = (result_t) fwrite_binaries(filePath, pngData, pngDataLength);
+    assert_equal_int(res, SUCCESS, "PNG data saved to file");
+
+    printf("Frame counter: %d\n", count);
+    free(pngData);
+
+    return SUCCESS;
+}
+
+static result_t display_stream_transfer_handler_loop(sock_fd_t sock_fd) {
+
+    while(1)
+        if(display_stream_transfer_handler(sock_fd) != SUCCESS) return FAILURE;
+}
+
+static void test_display_stream_transfer(void) {
+    test_create_stream_conn(display_stream_transfer_handler_loop);
+}
+
 static void run_tests(void) {
 
     printf(ANSI_COLOR_BLUE "Integration Test - requires to run: 'server' program only with 'test_server_transfer.run_tests()' \n" ANSI_COLOR_RESET);
-    test_uint8_transfer();
+    /*test_uint8_transfer();
     test_uint16_transfer();
     test_uint32_transfer();
     test_uint64_transfer();
@@ -291,7 +338,8 @@ static void run_tests(void) {
     test_int64_transfer();
     test_binary_transfer();
     test_cstring_transfer();
-    test_png_transfer();
+    test_png_transfer(); */
+    test_display_stream_transfer();
 }
 
 test_client_transfer_t test_client_transfer = { .run_tests = run_tests };
