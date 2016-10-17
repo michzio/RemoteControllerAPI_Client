@@ -4,12 +4,17 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <memory.h>
 #include "test_transfer.h"
 #include "../networking/connection.h"
 #include "../client.h"
 #include "../../networking/transfer/integer_transfer.h"
+#include "../../networking/transfer/str_transfer.h"
+#include "../../networking/transfer/binary_transfer.h"
 #include "../../unit_tests/test/assertion.h"
 #include "../../unit_tests/common/terminal.h"
+#include "../../comparers/comparer.h"
 
 #define TEST_PORT "3333"
 
@@ -189,6 +194,59 @@ static void test_int64_transfer(void) {
     test_create_stream_conn(int64_transfer_handler);
 }
 
+#define BINARY_DATA_LENGTH 32
+
+static result_t binary_transfer_handler(sock_fd_t sock_fd) {
+
+    result_t res = 0;
+    unsigned char sentBinaryData[BINARY_DATA_LENGTH];
+    unsigned char recvedBinaryData[BINARY_DATA_LENGTH];
+
+    // fill binary data to be send
+    for(int i=0; i<BINARY_DATA_LENGTH; i++) {
+        sentBinaryData[i] = (uint8_t) i;
+    }
+
+    res = send_binary(sock_fd, 8, sentBinaryData, BINARY_DATA_LENGTH);
+    assert_equal_int(res, SUCCESS, "Sent binary data to socket");
+
+    res = recv_binary(sock_fd, 8, recvedBinaryData, BINARY_DATA_LENGTH);
+    assert_equal_int(res, SUCCESS, "Received binary data from socket");
+
+    assert_equal_array(sentBinaryData, recvedBinaryData, BINARY_DATA_LENGTH, binary_cmp_func, __func__);
+
+    return SUCCESS;
+}
+
+static void test_binary_transfer(void) {
+    test_create_stream_conn(binary_transfer_handler);
+}
+
+static result_t cstring_transfer_handler(sock_fd_t sock_fd) {
+
+    result_t res = 0;
+    char *sentCString = "Testowy tekst!";
+    char *recvedCString = 0;
+    size_t recvedCStringLen = 0;
+
+    res = send_cstr(sock_fd, sentCString, strlen(sentCString));
+    assert_equal_int(res, SUCCESS, "Sent cstring to socket");
+
+    res = recv_cstr(sock_fd, &recvedCString, &recvedCStringLen);
+    assert_equal_int(res, SUCCESS, "Received cstring from socket");
+
+    assert_equal_int(strlen(sentCString), recvedCStringLen, "Sent and Received cstring lengths are equal");
+    assert_equal(sentCString, recvedCString, str_cmp_func, __func__);
+
+    free(recvedCString);
+
+    return SUCCESS;
+}
+
+static void test_cstring_transfer(void) {
+    test_create_stream_conn(cstring_transfer_handler);
+}
+
 static void run_tests(void) {
 
     printf(ANSI_COLOR_BLUE "Integration Test - requires to run: 'server' program only with 'test_server_transfer.run_tests()' \n" ANSI_COLOR_RESET);
@@ -200,8 +258,8 @@ static void run_tests(void) {
     test_int16_transfer();
     test_int32_transfer();
     test_int64_transfer();
-    //test_binary_transfer();
-    //test_cstring_transfer();
+    test_binary_transfer();
+    test_cstring_transfer();
 }
 
 test_client_transfer_t test_client_transfer = { .run_tests = run_tests };

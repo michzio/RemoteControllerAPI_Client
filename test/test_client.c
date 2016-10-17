@@ -17,7 +17,7 @@ static void test_datagram_client(void) {
 static void run_tests(void) {
 
     // TCP client
-    // test_stream_client();
+    test_stream_client();
     // UDP client
     test_datagram_client();
 }
