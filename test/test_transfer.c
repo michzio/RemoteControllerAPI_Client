@@ -15,6 +15,7 @@
 #include "../../unit_tests/test/assertion.h"
 #include "../../unit_tests/common/terminal.h"
 #include "../../comparers/comparer.h"
+#include "../../common/bitwise.h"
 
 #define TEST_PORT "3333"
 
@@ -247,6 +248,36 @@ static void test_cstring_transfer(void) {
     test_create_stream_conn(cstring_transfer_handler);
 }
 
+static result_t png_transfer_handler(sock_fd_t sock_fd) {
+
+    result_t res = 0;
+    unsigned char *pngData = 0;
+    size_t pngDataLength = 0;
+    size_t width = 0, height = 0;
+
+    // get size of png image
+    recv_uint32(sock_fd, &width);
+    recv_uint32(sock_fd, &height);
+    // get length of png data
+    recv_uint32(sock_fd, &pngDataLength);
+
+    // get png data
+    pngData = (unsigned char *) malloc(sizeof(unsigned char)*pngDataLength);
+    res = recv_binary(sock_fd, PACKET_LENGTH, pngData, pngDataLength);
+
+    assert_equal_int(res, SUCCESS, "received PNG data from socket");
+    printf(ANSI_COLOR_CYAN "png image size (%zu, %zu)\n" ANSI_COLOR_RESET, width, height);
+
+    res = fwrite_binaries("/Users/michzio/Desktop/test_client_screen_snapshot.png", pngData, pngDataLength);
+    assert_equal_int(res, SUCCESS, "PNG data saved to file");
+
+    free(pngData);
+}
+
+static void test_png_transfer(void) {
+    test_create_stream_conn(png_transfer_handler);
+}
+
 static void run_tests(void) {
 
     printf(ANSI_COLOR_BLUE "Integration Test - requires to run: 'server' program only with 'test_server_transfer.run_tests()' \n" ANSI_COLOR_RESET);
@@ -260,6 +291,7 @@ static void run_tests(void) {
     test_int64_transfer();
     test_binary_transfer();
     test_cstring_transfer();
+    test_png_transfer();
 }
 
 test_client_transfer_t test_client_transfer = { .run_tests = run_tests };
