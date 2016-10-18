@@ -16,6 +16,7 @@
 #include "../../unit_tests/common/terminal.h"
 #include "../../comparers/comparer.h"
 #include "../../common/bitwise.h"
+#include "../../common/libraries/lz4/lz4.h"
 
 #define TEST_PORT "3333"
 
@@ -282,7 +283,7 @@ static void test_png_transfer(void) {
 
 static int count = 0;
 
-static result_t display_stream_transfer_handler(sock_fd_t sock_fd) {
+static result_t display_stream_png_transfer_handler(sock_fd_t sock_fd) {
 
     result_t res = 0;
     unsigned char *pngData = 0;
@@ -315,14 +316,70 @@ static result_t display_stream_transfer_handler(sock_fd_t sock_fd) {
     return SUCCESS;
 }
 
-static result_t display_stream_transfer_handler_loop(sock_fd_t sock_fd) {
+static result_t display_stream_png_transfer_handler_loop(sock_fd_t sock_fd) {
 
     while(1)
-        if(display_stream_transfer_handler(sock_fd) != SUCCESS) return FAILURE;
+        if(display_stream_png_transfer_handler(sock_fd) != SUCCESS) return FAILURE;
 }
 
-static void test_display_stream_transfer(void) {
-    test_create_stream_conn(display_stream_transfer_handler_loop);
+static void test_display_stream_png_transfer(void) {
+    count = 0;
+    test_create_stream_conn(display_stream_png_transfer_handler_loop);
+}
+
+static unsigned char *xorData = 0;
+static size_t xorDataLength = 0;
+
+static result_t display_stream_lz4_transfer_handler(sock_fd_t sock_fd) {
+
+    result_t res = 0;
+    unsigned char *lz4Data = 0;
+    size_t lz4DataLength = 0;
+
+    // get length of LZ4 compressed data
+    if (recv_uint32(sock_fd, &lz4DataLength) != SUCCESS) return FAILURE;
+    // get LZ4 compressed data
+    lz4Data = (unsigned char *) malloc(sizeof(unsigned char) * lz4DataLength);
+    res = recv_binary(sock_fd, PACKET_LENGTH, lz4Data, lz4DataLength);
+    assert_equal_int(res, SUCCESS, "received LZ4 compressed data from socket");
+
+    if (res != SUCCESS) return FAILURE;
+    printf(ANSI_COLOR_CYAN "LZ4 data length: %zu\n" ANSI_COLOR_RESET, lz4DataLength);
+
+    // decompress frame data with LZ4
+    if(LZ4_decompress_safe(lz4Data, xorData, lz4DataLength, xorDataLength) < 0) {
+        fprintf(stderr, "%s: Error at decompression of LZ4 data.\n", __func__);
+        return FAILURE;
+    }
+
+    count++;
+    //char filePath[256];
+    //sprintf(filePath, "/Users/michzio/Desktop/display_stream/%d.bmp", count);
+
+    printf("Frame counter: %d\n", count);
+    free(lz4Data);
+
+    return SUCCESS;
+}
+
+static result_t display_stream_lz4_transfer_handler_loop(sock_fd_t sock_fd) {
+
+    size_t width = 0, height = 0;
+    if (recv_uint32(sock_fd, &width) != SUCCESS) return FAILURE;
+    if (recv_uint32(sock_fd, &height) != SUCCESS) return FAILURE;
+    printf(ANSI_COLOR_CYAN "frame size (%zu, %zu)\n" ANSI_COLOR_RESET, width, height);
+
+    // allocate required data structures
+    xorDataLength = width*height*4;
+    xorData = malloc(sizeof(unsigned char)*xorDataLength);
+
+    while(1)
+        if(display_stream_lz4_transfer_handler(sock_fd) != SUCCESS) return FAILURE;
+}
+
+static void test_display_stream_lz4_transfer(void) {
+    count = 0;
+    test_create_stream_conn(display_stream_lz4_transfer_handler_loop);
 }
 
 static void run_tests(void) {
@@ -339,7 +396,8 @@ static void run_tests(void) {
     test_binary_transfer();
     test_cstring_transfer();
     test_png_transfer(); */
-    test_display_stream_transfer();
+    //test_display_stream_png_transfer();
+    test_display_stream_lz4_transfer();
 }
 
 test_client_transfer_t test_client_transfer = { .run_tests = run_tests };
