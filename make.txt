@@ -16,13 +16,13 @@ CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 
 # libraries 
 # custom 
-NETWORKING_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/networking/libnetworking.a
-COMMON_FUNCTIONS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/libcommon_functions.a 
-COMPARERS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/libcomparers.a
-UNIT_TESTS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/libunit_tests.a
+NETWORKING_LIBRARY = ../networking/libnetworking.a
+COMMON_FUNCTIONS_LIBRARY = ../common/libcommon_functions.a
+COMPARERS_LIBRARY = ../comparers/libcomparers.a
+UNIT_TESTS_LIBRARY = ../unit_tests/libunit_tests.a
 
 # the build target executable: 
-TARGET = client
+TARGET = rc_client
 LIBRARY = librc_client.a
 
 # source files 
@@ -34,7 +34,7 @@ TEST_SOURCE_FILES = test_client.o test_transfer.o
 all: $(TARGET)
 
 $(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)	
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(NETWORKING_LIBRARY) $(COMMON_FUNCTIONS_LIBRARY) $(COMPARERS_LIBRARY) $(TEST_SOURCE_FILES) $(UNIT_TESTS_LIBRARY) 
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(NETWORKING_LIBRARY) $(COMMON_FUNCTIONS_LIBRARY) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY)
 
 $(LIBRARY): $(SOURCE_FILES) 
 	$(AR) $(LIBRARY) $(SOURCE_FILES)
@@ -64,4 +64,4 @@ test_transfer.o: test/test_transfer.c test/test_transfer.h
 	$(CC) $(CFLAGS) -c test/test_transfer.c
 
 clean:
-	$(RM) $(TARGET) $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)
+	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)

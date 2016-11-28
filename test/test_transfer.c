@@ -384,7 +384,7 @@ static void test_display_stream_lz4_transfer(void) {
 
 static void run_tests(void) {
 
-    printf(ANSI_COLOR_BLUE "Integration Test - requires to run: 'server' program only with 'test_server_transfer.run_tests()' \n" ANSI_COLOR_RESET);
+    printf(ANSI_COLOR_BLUE "Integration Test - requires to run: 'rc_server' program only with 'test_server_transfer.run_tests()' \n" ANSI_COLOR_RESET);
     /*test_uint8_transfer();
     test_uint16_transfer();
     test_uint32_transfer();
