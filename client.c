@@ -11,8 +11,8 @@
 
 result_t start_client(void) {
 
-    //echo_stream_conn();
-     echo_datagram_conn();
+    echo_stream_conn();
+    //echo_datagram_conn();
 
     return SUCCESS;
 
