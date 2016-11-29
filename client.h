@@ -11,7 +11,7 @@
 
 #define RPC_PORT "2016" // the port remote controller client will be connecting to for remote procedure calls
 #define EVENT_PORT "2017" // the port remote controller client will be connecting to for event handling
-#define ECHO_PORT " 2016" // the port remote controller client will be connecting to for echo handling
+#define ECHO_PORT " 3333" // the port remote controller client will be connecting to for echo handling
 #define SERVER_ADDRESS "192.168.8.101"
 
 result_t start_client(void);
