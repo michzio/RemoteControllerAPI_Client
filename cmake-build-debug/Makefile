@@ -323,35 +323,65 @@ networking/connection.c.s:
 	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/connection.c.s
 .PHONY : networking/connection.c.s
 
-networking/datagram_conn.o: networking/datagram_conn.c.o
+networking/datagram_client.o: networking/datagram_client.c.o
 
-.PHONY : networking/datagram_conn.o
+.PHONY : networking/datagram_client.o
 
 # target to build an object file
-networking/datagram_conn.c.o:
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o
-	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/datagram_conn.c.o
-.PHONY : networking/datagram_conn.c.o
+networking/datagram_client.c.o:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/datagram_client.c.o
+.PHONY : networking/datagram_client.c.o
 
-networking/datagram_conn.i: networking/datagram_conn.c.i
+networking/datagram_client.i: networking/datagram_client.c.i
 
-.PHONY : networking/datagram_conn.i
+.PHONY : networking/datagram_client.i
 
 # target to preprocess a source file
-networking/datagram_conn.c.i:
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.i
-	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/datagram_conn.c.i
-.PHONY : networking/datagram_conn.c.i
+networking/datagram_client.c.i:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.i
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/datagram_client.c.i
+.PHONY : networking/datagram_client.c.i
 
-networking/datagram_conn.s: networking/datagram_conn.c.s
+networking/datagram_client.s: networking/datagram_client.c.s
 
-.PHONY : networking/datagram_conn.s
+.PHONY : networking/datagram_client.s
 
 # target to generate assembly for a file
-networking/datagram_conn.c.s:
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.s
-	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/datagram_conn.c.s
-.PHONY : networking/datagram_conn.c.s
+networking/datagram_client.c.s:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.s
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/datagram_client.c.s
+.PHONY : networking/datagram_client.c.s
+
+networking/generic_client.o: networking/generic_client.c.o
+
+.PHONY : networking/generic_client.o
+
+# target to build an object file
+networking/generic_client.c.o:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.o
+.PHONY : networking/generic_client.c.o
+
+networking/generic_client.i: networking/generic_client.c.i
+
+.PHONY : networking/generic_client.i
+
+# target to preprocess a source file
+networking/generic_client.c.i:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.i
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.i
+.PHONY : networking/generic_client.c.i
+
+networking/generic_client.s: networking/generic_client.c.s
+
+.PHONY : networking/generic_client.s
+
+# target to generate assembly for a file
+networking/generic_client.c.s:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.s
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.s
+.PHONY : networking/generic_client.c.s
 
 networking/service.o: networking/service.c.o
 
@@ -383,35 +413,35 @@ networking/service.c.s:
 	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/service.c.s
 .PHONY : networking/service.c.s
 
-networking/stream_conn.o: networking/stream_conn.c.o
+networking/stream_client.o: networking/stream_client.c.o
 
-.PHONY : networking/stream_conn.o
+.PHONY : networking/stream_client.o
 
 # target to build an object file
-networking/stream_conn.c.o:
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o
-	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/stream_conn.c.o
-.PHONY : networking/stream_conn.c.o
+networking/stream_client.c.o:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/stream_client.c.o
+.PHONY : networking/stream_client.c.o
 
-networking/stream_conn.i: networking/stream_conn.c.i
+networking/stream_client.i: networking/stream_client.c.i
 
-.PHONY : networking/stream_conn.i
+.PHONY : networking/stream_client.i
 
 # target to preprocess a source file
-networking/stream_conn.c.i:
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.i
-	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/stream_conn.c.i
-.PHONY : networking/stream_conn.c.i
+networking/stream_client.c.i:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.i
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/stream_client.c.i
+.PHONY : networking/stream_client.c.i
 
-networking/stream_conn.s: networking/stream_conn.c.s
+networking/stream_client.s: networking/stream_client.c.s
 
-.PHONY : networking/stream_conn.s
+.PHONY : networking/stream_client.s
 
 # target to generate assembly for a file
-networking/stream_conn.c.s:
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.s
-	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/stream_conn.c.s
-.PHONY : networking/stream_conn.c.s
+networking/stream_client.c.s:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.s
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/stream_client.c.s
+.PHONY : networking/stream_client.c.s
 
 test/test_client.o: test/test_client.c.o
 
@@ -522,15 +552,18 @@ help:
 	@echo "... networking/connection.o"
 	@echo "... networking/connection.i"
 	@echo "... networking/connection.s"
-	@echo "... networking/datagram_conn.o"
-	@echo "... networking/datagram_conn.i"
-	@echo "... networking/datagram_conn.s"
+	@echo "... networking/datagram_client.o"
+	@echo "... networking/datagram_client.i"
+	@echo "... networking/datagram_client.s"
+	@echo "... networking/generic_client.o"
+	@echo "... networking/generic_client.i"
+	@echo "... networking/generic_client.s"
 	@echo "... networking/service.o"
 	@echo "... networking/service.i"
 	@echo "... networking/service.s"
-	@echo "... networking/stream_conn.o"
-	@echo "... networking/stream_conn.i"
-	@echo "... networking/stream_conn.s"
+	@echo "... networking/stream_client.o"
+	@echo "... networking/stream_client.i"
+	@echo "... networking/stream_client.s"
 	@echo "... test/test_client.o"
 	@echo "... test/test_client.i"
 	@echo "... test/test_client.s"

@@ -129,33 +129,57 @@ CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o.provides: CMakeFil
 CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o.provides.build: CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o
 
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o: CMakeFiles/RC_Client_Lib_Static.dir/flags.make
-CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o: ../networking/datagram_conn.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_conn.c
+CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o: CMakeFiles/RC_Client_Lib_Static.dir/flags.make
+CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o: ../networking/datagram_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.c
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_conn.c > CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.i
+CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.c > CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.i
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_conn.c -o CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.s
+CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.c -o CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.s
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.requires:
+CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.requires:
 
-.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.requires
+.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.requires
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.provides: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.requires
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.provides.build
-.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.provides
+CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.provides: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.requires
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.provides.build
+.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.provides
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.provides.build: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o
+CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.provides.build: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o
+
+
+CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o: CMakeFiles/RC_Client_Lib_Static.dir/flags.make
+CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o: ../networking/generic_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.c
+
+CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.c > CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.i
+
+CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.c -o CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.s
+
+CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.requires:
+
+.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.requires
+
+CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.provides: CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.requires
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.provides.build
+.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.provides
+
+CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.provides.build: CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o
 
 
 CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o: CMakeFiles/RC_Client_Lib_Static.dir/flags.make
 CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o: ../networking/service.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/service.c
 
 CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.i: cmake_force
@@ -177,28 +201,28 @@ CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o.provides: CMakeFiles/
 CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o.provides.build: CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o
 
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o: CMakeFiles/RC_Client_Lib_Static.dir/flags.make
-CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o: ../networking/stream_conn.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_conn.c
+CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o: CMakeFiles/RC_Client_Lib_Static.dir/flags.make
+CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o: ../networking/stream_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_client.c
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_conn.c > CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.i
+CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_client.c > CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.i
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_conn.c -o CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.s
+CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_client.c -o CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.s
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.requires:
+CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.requires:
 
-.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.requires
+.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.requires
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.provides: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.requires
-	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.provides.build
-.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.provides
+CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.provides: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.requires
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.provides.build
+.PHONY : CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.provides
 
-CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.provides.build: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o
+CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.provides.build: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o
 
 
 # Object files for target RC_Client_Lib_Static
@@ -206,9 +230,10 @@ RC_Client_Lib_Static_OBJECTS = \
 "CMakeFiles/RC_Client_Lib_Static.dir/client.c.o" \
 "CMakeFiles/RC_Client_Lib_Static.dir/networking/conn_socket.c.o" \
 "CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o" \
-"CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o" \
+"CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o" \
+"CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o" \
 "CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o" \
-"CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o"
+"CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o"
 
 # External object files for target RC_Client_Lib_Static
 RC_Client_Lib_Static_EXTERNAL_OBJECTS =
@@ -216,12 +241,13 @@ RC_Client_Lib_Static_EXTERNAL_OBJECTS =
 librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/client.c.o
 librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/conn_socket.c.o
 librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o
-librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o
+librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o
+librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o
 librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o
-librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o
+librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o
 librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/build.make
 librc_client.a: CMakeFiles/RC_Client_Lib_Static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C static library librc_client.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library librc_client.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/RC_Client_Lib_Static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RC_Client_Lib_Static.dir/link.txt --verbose=$(VERBOSE)
 
@@ -233,9 +259,10 @@ CMakeFiles/RC_Client_Lib_Static.dir/build: librc_client.a
 CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/client.c.o.requires
 CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/conn_socket.c.o.requires
 CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o.requires
-CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o.requires
+CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o.requires
+CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o.requires
 CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o.requires
-CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o.requires
+CMakeFiles/RC_Client_Lib_Static.dir/requires: CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o.requires
 
 .PHONY : CMakeFiles/RC_Client_Lib_Static.dir/requires
 

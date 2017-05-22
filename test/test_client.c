@@ -5,13 +5,29 @@
 #include "test_client.h"
 #include "../networking/stream_client.h"
 #include "../networking/datagram_client.h"
+#include "../client.h"
+#include "../config.h"
 
 static void test_stream_client(void) {
-    echo_stream_conn();
+
+    client_info_t *client_info;
+    client_info_init(&client_info);
+    client_info_set_conn_ip(client_info, TEST_SERVER_ADDRESS);
+    client_info_set_conn_port(client_info, TEST_SERVER_PORT);
+
+    start_client(echo_stream_client, client_info);
+
+
 }
 
 static void test_datagram_client(void) {
-    echo_datagram_conn();
+
+    client_info_t *client_info;
+    client_info_init(&client_info);
+    client_info_set_conn_ip(client_info, TEST_SERVER_ADDRESS);
+    client_info_set_conn_port(client_info, TEST_SERVER_PORT);
+
+    start_client(echo_datagram_client, client_info);
 }
 
 static void run_tests(void) {

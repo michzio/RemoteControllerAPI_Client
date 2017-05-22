@@ -1,0 +1,3 @@
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/output/unix/bin/rc_client
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/output/unix/lib/librc_client_shared.dylib
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/output/unix/lib/static/librc_client.a

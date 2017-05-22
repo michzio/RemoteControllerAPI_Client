@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "connection.h"
-#include "generic_client.h"
 
 static result_t create_conn(client_info_t *info, create_conn_sock_t create_conn_sock , connection_handler_t handle_connection) {
 
@@ -15,6 +14,7 @@ static result_t create_conn(client_info_t *info, create_conn_sock_t create_conn_
 
     if(create_conn_sock(client_info_conn_ip(info),
                         client_info_conn_port(info),
+                        client_info_pasv_port(info),
                         &cs_fd) == FAILURE) {
         fprintf(stderr, "create_conn_sock: failed!\n");
         return FAILURE;

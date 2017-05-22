@@ -7,9 +7,10 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/client.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/client.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/conn_socket.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/conn_socket.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/connection.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/connection.c.o"
-  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_conn.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/datagram_conn.c.o"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/datagram_client.c.o"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/service.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/service.c.o"
-  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_conn.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/stream_conn.c.o"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_client.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/stream_client.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

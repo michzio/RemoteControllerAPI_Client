@@ -5,6 +5,9 @@
 #ifndef REMOTECONTROLLERAPI_CLIENT_GENERIC_CLIENT_H
 #define REMOTECONTROLLERAPI_CLIENT_GENERIC_CLIENT_H
 
+#include "../../networking/common/network_types.h"
+#include "../../common/types.h"
+
 // client_info_t contains information about created client
 struct client_info;
 typedef struct client_info client_info_t;

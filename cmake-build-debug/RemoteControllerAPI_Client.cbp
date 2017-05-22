@@ -241,11 +241,19 @@
 			<Option target="RC_Client_Lib_Static"/>
 			<Option target="RC_Client_Lib"/>
 		</Unit>
-		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_conn.c">
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.c">
 			<Option target="RC_Client_Lib_Static"/>
 			<Option target="RC_Client_Lib"/>
 		</Unit>
-		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_conn.h">
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.h">
+			<Option target="RC_Client_Lib_Static"/>
+			<Option target="RC_Client_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.c">
+			<Option target="RC_Client_Lib_Static"/>
+			<Option target="RC_Client_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.h">
 			<Option target="RC_Client_Lib_Static"/>
 			<Option target="RC_Client_Lib"/>
 		</Unit>
@@ -257,11 +265,11 @@
 			<Option target="RC_Client_Lib_Static"/>
 			<Option target="RC_Client_Lib"/>
 		</Unit>
-		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_conn.c">
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_client.c">
 			<Option target="RC_Client_Lib_Static"/>
 			<Option target="RC_Client_Lib"/>
 		</Unit>
-		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_conn.h">
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_client.h">
 			<Option target="RC_Client_Lib_Static"/>
 			<Option target="RC_Client_Lib"/>
 		</Unit>

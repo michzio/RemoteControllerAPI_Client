@@ -8,9 +8,9 @@
 #include "../../networking/helpers/address_helper.h"
 #include "../../networking/common/network_types.h"
 
-typedef result_t (*create_conn_sock_t)(const char*addr, const char *port, sock_fd_t *);
+typedef result_t (*create_conn_sock_t)(const char*addr, const char *port, const char *bind_port, sock_fd_t *);
 
-result_t create_stream_conn_sock(const char*addr, const char *port, sock_fd_t *conn_sock_fd);
-result_t create_datagram_conn_sock(const char*addr, const char *port, sock_fd_t *conn_sock_fd);
+result_t create_stream_conn_sock(const char*addr, const char *port, const char *bind_port, sock_fd_t *conn_sock_fd);
+result_t create_datagram_conn_sock(const char*addr, const char *port, const char *bind_port, sock_fd_t *conn_sock_fd);
 
 #endif //REMOTECONTROLLERAPI_CLIENT_CONN_SOCKET_H

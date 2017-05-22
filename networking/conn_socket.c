@@ -10,7 +10,7 @@
 #include "conn_socket.h"
 #include "../client.h"
 
-static result_t bind_conn_sock(sock_fd_t conn_sock_fd, sock_type_t sock_type);
+static result_t bind_conn_sock(const sock_fd_t conn_sock_fd, const sock_type_t sock_type, const char *bind_port);
 
 /**
  * Function creates new client socket connected
@@ -20,7 +20,7 @@ static result_t bind_conn_sock(sock_fd_t conn_sock_fd, sock_type_t sock_type);
  * send(), recv(), read(), write() functions
  * for data transfer besides sendto(), recvfrom().
  */
-static result_t create_connection_socket(const char*addr, const char *port, sock_type_t sock_type, sock_fd_t *conn_sock_fd) {
+static result_t create_connection_socket(const char*addr, const char *port, const char *bind_port, sock_type_t sock_type, sock_fd_t *conn_sock_fd) {
 
     int cs_fd; // connection socket file descriptor
     struct addrinfo addrinfo_hints, *addrinfo_res, *ai_ptr; // address info structures holding server address information
@@ -47,7 +47,7 @@ static result_t create_connection_socket(const char*addr, const char *port, sock
         }
 
         // possible explicit bind() for UDP connection socket
-        if( (sock_type == SOCK_DGRAM) && bind_conn_sock(cs_fd, sock_type)) {
+        if( (sock_type == SOCK_DGRAM) && bind_conn_sock(cs_fd, sock_type, bind_port)) {
             close(cs_fd);
             fprintf(stderr, "bind_conn_sock: failed!\n");
             continue;
@@ -77,15 +77,15 @@ static result_t create_connection_socket(const char*addr, const char *port, sock
     return SUCCESS;
 }
 
-result_t create_stream_conn_sock(const char*addr, const char *port, sock_fd_t *conn_sock_fd) {
-    return create_connection_socket(addr, port, SOCK_STREAM, conn_sock_fd);
+result_t create_stream_conn_sock(const char*addr, const char *port, const char *bind_port, sock_fd_t *conn_sock_fd) {
+    return create_connection_socket(addr, port, bind_port, SOCK_STREAM, conn_sock_fd);
 }
 
-result_t create_datagram_conn_sock(const char*addr, const char *port, sock_fd_t *conn_sock_fd) {
-    return create_connection_socket(addr, port, SOCK_DGRAM, conn_sock_fd);
+result_t create_datagram_conn_sock(const char*addr, const char *port, const char *bind_port, sock_fd_t *conn_sock_fd) {
+    return create_connection_socket(addr, port, bind_port, SOCK_DGRAM, conn_sock_fd);
 }
 
-static result_t bind_conn_sock(sock_fd_t conn_sock_fd, sock_type_t sock_type) {
+static result_t bind_conn_sock(const sock_fd_t conn_sock_fd, const sock_type_t sock_type, const char *bind_port) {
 
     struct addrinfo addrinfo_hints, *addrinfo_res, *ai_ptr; // address info structures holding host address information
     int gai_res; // getaddrinfo() result value
@@ -97,7 +97,7 @@ static result_t bind_conn_sock(sock_fd_t conn_sock_fd, sock_type_t sock_type) {
     addrinfo_hints.ai_socktype = (int) sock_type;
 
     // getting result address info structure
-    if( (gai_res = getaddrinfo(NULL, PASV_PORT, &addrinfo_hints, &addrinfo_res)) != 0 ) {
+    if( (gai_res = getaddrinfo(NULL, bind_port, &addrinfo_hints, &addrinfo_res)) != 0 ) {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(gai_res));
         return FAILURE;
     }

@@ -7,6 +7,7 @@
 
 #include "../networking/connection.h"
 #include "../client.h"
+#include "../config.h"
 
 typedef struct {
     void (*run_tests)(void);
@@ -14,14 +15,20 @@ typedef struct {
 
 extern test_client_transfer_t test_client_transfer;
 
-#define TEST_PORT "3333"
 
 static void test_create_stream_conn(connection_handler_t test_service_handler) {
 
-    if(create_stream_conn(SERVER_ADDRESS, TEST_PORT, test_service_handler) != SUCCESS) {
+    client_info_t *client_info;
+    client_info_init(&client_info);
+    client_info_set_conn_ip(client_info, TEST_SERVER_ADDRESS);
+    client_info_set_conn_port(client_info, TEST_SERVER_PORT);
+
+    if(create_stream_conn(client_info, test_service_handler) != SUCCESS) {
         fprintf(stderr, "create_stream_conn: failed!\n");
         return;
     }
+
+    client_info_free(client_info);
 }
 
 #endif //REMOTECONTROLLERAPI_CLIENT_TEST_TRANSFER_H

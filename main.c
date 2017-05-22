@@ -7,14 +7,7 @@
 #include "test/test_transfer.h"
 #include "networking/stream_client.h"
 #include "networking/datagram_client.h"
-
-#define CLIENT_PORT "0" // the port remote controller client will be bound to if there is explicit binding (0 means any port)
-#define SERVER_PORT "55551" // the port remote controller client will be connecting to server
-#define SERVER_ADDRESS "192.168.8.101"
-
-#define RPC_PORT "2016" // the port remote controller client will be connecting to for remote procedure calls
-#define EVENT_PORT "2017" // the port remote controller client will be connecting to for event handling
-#define ECHO_PORT " 3333" // the port remote controller client will be connecting to for echo handling
+#include "config.h"
 
 int main(int argc, char **argv) {
 

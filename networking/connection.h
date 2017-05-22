@@ -6,6 +6,7 @@
 
 #include "../../networking/helpers/address_helper.h"
 #include "conn_socket.h"
+#include "generic_client.h"
 
 typedef result_t (*connection_handler_t)(sock_fd_t);
 

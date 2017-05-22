@@ -2,9 +2,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/RC_Client_Lib_Static.dir/client.c.o"
   "CMakeFiles/RC_Client_Lib_Static.dir/networking/conn_socket.c.o"
   "CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o"
-  "CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_conn.c.o"
+  "CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o"
+  "CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o"
   "CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o"
-  "CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_conn.c.o"
+  "CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o"
   "librc_client.pdb"
   "librc_client.a"
 )
