@@ -42,7 +42,7 @@ set_target_properties(RC_Client_Lib_Static PROPERTIES OUTPUT_NAME rc_client)
 target_link_libraries(RC_Client_Lib_Static ${NETWORKING_LIB_PATH})
 target_link_libraries(RC_Client_Lib_Static ${COMMON_FUNCTIONS_LIB_PATH})
 
-add_executable(RemoteControllerAPI_Client main.c ${TEST_SOURCE_FILES})
+add_executable(RemoteControllerAPI_Client main.c config.h ${TEST_SOURCE_FILES})
 set_target_properties(RemoteControllerAPI_Client PROPERTIES OUTPUT_NAME rc_client)
 target_link_libraries(RemoteControllerAPI_Client RC_Client_Lib_Static)
 target_link_libraries(RemoteControllerAPI_Client ${COMPARERS_LIB_PATH})
