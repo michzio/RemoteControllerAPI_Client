@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 project(RemoteControllerAPI_Client)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c99")
-set(SOURCE_FILES client.h client.c networking/conn_socket.h networking/conn_socket.c networking/connection.h networking/connection.c networking/datagram_conn.h networking/datagram_conn.c networking/service.h networking/service.c networking/stream_conn.h networking/stream_conn.c)
+set(SOURCE_FILES client.h client.c networking/conn_socket.h networking/conn_socket.c networking/connection.h networking/connection.c networking/datagram_client.h networking/datagram_client.c networking/service.h networking/service.c networking/stream_client.h networking/stream_client.c)
 set(TEST_SOURCE_FILES test/test_client.h test/test_client.c test/test_transfer.h test/test_transfer.c test/test_transfer_osx.c)
 
 if(CYGWIN)

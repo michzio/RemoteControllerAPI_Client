@@ -3,14 +3,14 @@
 //
 
 #include <stdio.h>
-#include "datagram_conn.h"
+#include "datagram_client.h"
 #include "connection.h"
 #include "../client.h"
 #include "service.h"
 
-result_t echo_datagram_conn(void) {
+result_t echo_datagram_client(client_info_t *info) {
 
-    if(create_datagram_conn(SERVER_ADDRESS, ECHO_PORT, echo_service_handler) == FAILURE) {
+    if(create_datagram_conn(info, echo_service_handler) == FAILURE) {
         fprintf(stderr, "create_datagram_conn: failed!\n");
         return FAILURE;
     }

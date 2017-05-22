@@ -3,8 +3,8 @@
 //
 
 #include "test_client.h"
-#include "../networking/stream_conn.h"
-#include "../networking/datagram_conn.h"
+#include "../networking/stream_client.h"
+#include "../networking/datagram_client.h"
 
 static void test_stream_client(void) {
     echo_stream_conn();
