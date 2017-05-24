@@ -26,7 +26,7 @@ TARGET = rc_client
 LIBRARY = librc_client.a
 
 # source files 
-SOURCE_FILES = conn_socket.o connection.o datagram_conn.o service.o stream_conn.o client.o
+SOURCE_FILES = conn_socket.o connection.o datagram_client.o generic_client.o service.o stream_client.o client.o
 
 # test source files 
 TEST_SOURCE_FILES = test_client.o test_transfer.o test_transfer_osx.o
@@ -45,14 +45,17 @@ conn_socket.o: networking/conn_socket.c networking/conn_socket.h
 connection.o: networking/connection.c networking/connection.h
 	$(CC) $(CFLAGS) -c networking/connection.c
 
-datagram_conn.o: networking/datagram_conn.c networking/datagram_conn.h
-	$(CC) $(CFLAGS) -c networking/datagram_conn.c
+datagram_client.o: networking/datagram_client.c networking/datagram_client.h
+	$(CC) $(CFLAGS) -c networking/datagram_client.c
+
+generic_client.o: networking/generic_client.c networking/generic_client.h
+	$(CC) $(CFLAGS) -c networking/generic_client.c	
 
 service.o: networking/service.c networking/service.h
 	$(CC) $(CFLAGS) -c networking/service.c
 
-stream_conn.o: networking/stream_conn.c networking/stream_conn.h
-	$(CC) $(CFLAGS) -c networking/stream_conn.c
+stream_client.o: networking/stream_client.c networking/stream_client.h
+	$(CC) $(CFLAGS) -c networking/stream_client.c
 
 client.o: client.c client.h
 	$(CC) $(CFLAGS) -c client.c
