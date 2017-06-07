@@ -16,14 +16,28 @@ CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 
 # libraries 
 # custom 
-NETWORKING_LIBRARY = ../networking/libnetworking.a
-COMMON_FUNCTIONS_LIBRARY = ../common/libcommon_functions.a
-COMPARERS_LIBRARY = ../comparers/libcomparers.a
-UNIT_TESTS_LIBRARY = ../unit_tests/libunit_tests.a
+NETWORKING_INCL_DIR = ../networking
+COMMON_FUNCTIONS_INCL_DIR = ../common
+COMPARERS_INCL_DIR = ../comparers
+UNIT_TESTS_INCL_DIR = ../unit_tests
+
+NETWORKING_LIBRARY = $(NETWORKING_INCL_DIR)/output/debug/lib/static/libnetworking.a
+COMMON_FUNCTIONS_LIBRARY = $(COMMON_FUNCTIONS_INCL_DIR)/output/debug/lib/static/libcommon_functions.a
+COMPARERS_LIBRARY = $(COMPARERS_INCL_DIR)/output/debug/lib/static/libcomparers.a
+UNIT_TESTS_LIBRARY = $(UNIT_TESTS_INCL_DIR)/output/debug/lib/static/libunit_tests.a
 
 # the build target executable: 
 TARGET = rc_client
 LIBRARY = librc_client.a
+SHARED_LIBRARY = librc_client.so
+
+# on macOS build .dylib shared library
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	DYNAMIC_LIBRARY= librc_client.dylib
+else 
+	DYNAMIC_LIBRARY=
+endif
 
 # source files 
 SOURCE_FILES = conn_socket.o connection.o datagram_client.o generic_client.o service.o stream_client.o client.o
@@ -31,43 +45,60 @@ SOURCE_FILES = conn_socket.o connection.o datagram_client.o generic_client.o ser
 # test source files 
 TEST_SOURCE_FILES = test_client.o test_transfer.o test_transfer_osx.o
 
-all: $(TARGET)
+# output directories 
+OUTPUT_DIR = output/debug
+OUTPUT_LIB_DIR = $(OUTPUT_DIR)/lib
+OUTPUT_STATIC_LIB_DIR = $(OUTPUT_LIB_DIR)/static
+OUTPUT_BIN_DIR = $(OUTPUT_DIR)/bin
+OUTPUT_TEST_DIR = $(OUTPUT_DIR)/test
 
-$(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)	
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(NETWORKING_LIBRARY) $(COMMON_FUNCTIONS_LIBRARY) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY)
+all: directories libraries $(TARGET)
+
+# make output directories
+directories: 
+	@mkdir -p $(OUTPUT_DIR)
+	@mkdir -p $(OUTPUT_LIB_DIR)
+	@mkdir -p $(OUTPUT_STATIC_LIB_DIR)
+	@mkdir -p $(OUTPUT_BIN_DIR)
+	@mkdir -p $(OUTPUT_TEST_DIR)
+
+libraries: $(LIBRARY)
+
+$(TARGET): $(LIBRARY) $(TEST_SOURCE_FILES)	
+	$(CC) $(CFLAGS) -o $(OUTPUT_BIN_DIR)/$(TARGET) main.c $(OUTPUT_TEST_DIR)/*.o $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(NETWORKING_LIBRARY) $(COMMON_FUNCTIONS_LIBRARY) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY)
 
 $(LIBRARY): $(SOURCE_FILES) 
-	$(AR) $(LIBRARY) $(SOURCE_FILES)
+	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/*.o
 
 conn_socket.o: networking/conn_socket.c networking/conn_socket.h
-	$(CC) $(CFLAGS) -c networking/conn_socket.c
+	$(CC) $(CFLAGS) -c networking/conn_socket.c -o $(OUTPUT_DIR)/conn_socket.o
 
 connection.o: networking/connection.c networking/connection.h
-	$(CC) $(CFLAGS) -c networking/connection.c
+	$(CC) $(CFLAGS) -c networking/connection.c -o $(OUTPUT_DIR)/connection.o
 
 datagram_client.o: networking/datagram_client.c networking/datagram_client.h
-	$(CC) $(CFLAGS) -c networking/datagram_client.c
+	$(CC) $(CFLAGS) -c networking/datagram_client.c -o $(OUTPUT_DIR)/datagram_client.o
 
 generic_client.o: networking/generic_client.c networking/generic_client.h
-	$(CC) $(CFLAGS) -c networking/generic_client.c	
+	$(CC) $(CFLAGS) -c networking/generic_client.c -o $(OUTPUT_DIR)/generic_client.o
 
 service.o: networking/service.c networking/service.h
-	$(CC) $(CFLAGS) -c networking/service.c
+	$(CC) $(CFLAGS) -c networking/service.c -o $(OUTPUT_DIR)/service.o
 
 stream_client.o: networking/stream_client.c networking/stream_client.h
-	$(CC) $(CFLAGS) -c networking/stream_client.c
+	$(CC) $(CFLAGS) -c networking/stream_client.c -o $(OUTPUT_DIR)/stream_client.o
 
 client.o: client.c client.h
-	$(CC) $(CFLAGS) -c client.c
+	$(CC) $(CFLAGS) -c client.c -o $(OUTPUT_DIR)/client.o
 
 test_client.o: test/test_client.c test/test_client.h
-	$(CC) $(CFLAGS) -c test/test_client.c
+	$(CC) $(CFLAGS) -c test/test_client.c -o $(OUTPUT_TEST_DIR)/test_client.o
 
 test_transfer.o: test/test_transfer.c test/test_transfer.h
-	$(CC) $(CFLAGS) -c test/test_transfer.c
+	$(CC) $(CFLAGS) -c test/test_transfer.c -o $(OUTPUT_TEST_DIR)/test_transfer.o
 
 test_transfer_osx.o: test/test_transfer_osx.c test/test_transfer.h
-	$(CC) $(CFLAGS) -c test/test_transfer_osx.c
+	$(CC) $(CFLAGS) -c test/test_transfer_osx.c -o $(OUTPUT_TEST_DIR)/test_transfer_osx.o
 
 clean:
-	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)
+	$(RM) -rf $(OUTPUT_DIR)

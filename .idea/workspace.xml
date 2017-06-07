@@ -2,9 +2,9 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
+      <config projectName="RemoteControllerAPI_Client" targetName="RemoteControllerAPI_Client" />
       <config projectName="RemoteControllerAPI_Client" targetName="Install_RemoteControllerAPI_Client" />
       <config projectName="RemoteControllerAPI_Client" targetName="RC_Client_Lib_Static" />
-      <config projectName="RemoteControllerAPI_Client" targetName="RemoteControllerAPI_Client" />
       <config projectName="RemoteControllerAPI_Client" targetName="RC_Client_Lib" />
     </generated>
   </component>
@@ -15,7 +15,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d812bbe-4078-40ca-b703-a8a06dd9afd8" name="Default" comment="CMakeLists.txt - updated to support Windows Cygwin build &#10;make.txt - updated to support Windows Cygwin build">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client.dSYM/Contents/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client.dSYM/Contents/Resources/DWARF/client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/conn_socket.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/connection.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/datagram_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generic_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/librc_client.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/unix/bin/rc_client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/unix/lib/librc_client_shared.dylib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/unix/lib/static/librc_client.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rc_client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rc_client.dSYM/Contents/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rc_client.dSYM/Contents/Resources/DWARF/rc_client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/service.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stream_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_transfer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_transfer_osx.o" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/client.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/client.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/client.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/client.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/librc_client.a" afterPath="$PROJECT_DIR$/cmake-build-debug/librc_client.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/rc_client" afterPath="$PROJECT_DIR$/cmake-build-debug/rc_client" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/RemoteControllerAPI_Client.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/RemoteControllerAPI_Client.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/install_manifest.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/install_manifest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/make.txt" afterPath="$PROJECT_DIR$/make.txt" />
     </list>
     <ignored path="client.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +70,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="generic_client.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="generic_client.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/networking/generic_client.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="35" column="68" lean-forward="false" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -87,9 +131,9 @@
         <option value="$PROJECT_DIR$/test/test_client.c" />
         <option value="$PROJECT_DIR$/test/test_transfer.h" />
         <option value="$PROJECT_DIR$/networking/generic_client.c" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/config.h" />
         <option value="$PROJECT_DIR$/client.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -134,20 +178,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RemoteControllerAPI_Client" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="networking" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -177,7 +207,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Build All">
+  <component name="RunManager" selected="Application.Install_RemoteControllerAPI_Client">
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
       <method />
     </configuration>
@@ -436,7 +466,9 @@
       <workItem from="1480530911963" duration="142000" />
       <workItem from="1495443714964" duration="15391000" />
       <workItem from="1495630230354" duration="298000" />
-      <workItem from="1495632499048" duration="76000" />
+      <workItem from="1495632499048" duration="307000" />
+      <workItem from="1495882575478" duration="27000" />
+      <workItem from="1496821796997" duration="232000" />
     </task>
     <task id="LOCAL-00001" summary="corrected initial code -&gt; client program structure">
       <created>1469111147630</created>
@@ -505,24 +537,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78242000" />
+    <option name="totallyTimeSpent" value="78732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="23" width="1293" height="768" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21103117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21742606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30473372" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2677515" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2352071" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20710059" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41403025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30536452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -770,9 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="e#146#198#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="32" column="17" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,9 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="e#51#69#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,17 +922,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="26" column="6" lean-forward="false" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/networking/generic_client.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="35" column="68" lean-forward="false" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
           <folding />
         </state>
       </provider>

@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.o"
   "CMakeFiles/RC_Client_Lib.dir/networking/service.c.o"
   "CMakeFiles/RC_Client_Lib.dir/networking/stream_client.c.o"
-  "librc_client_shared.pdb"
-  "librc_client_shared.dylib"
+  "librc_client.pdb"
+  "librc_client.dylib"
 )
 
 # Per-language clean rules from dependency scanning.

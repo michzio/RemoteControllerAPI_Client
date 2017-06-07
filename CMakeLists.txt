@@ -33,7 +33,7 @@ else()
 endif()
 
 add_library(RC_Client_Lib SHARED ${SOURCE_FILES})
-set_target_properties(RC_Client_Lib PROPERTIES OUTPUT_NAME rc_client_shared)
+set_target_properties(RC_Client_Lib PROPERTIES OUTPUT_NAME rc_client)
 target_link_libraries(RC_Client_Lib ${NETWORKING_LIB_PATH})
 target_link_libraries(RC_Client_Lib ${COMMON_FUNCTIONS_LIB_PATH})
 

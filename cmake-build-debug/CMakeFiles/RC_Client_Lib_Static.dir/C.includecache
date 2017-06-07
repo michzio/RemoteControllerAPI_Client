@@ -19,6 +19,10 @@ unistd.h
 -
 netdb.h
 -
+string.h
+-
+errno.h
+-
 client.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/client.h
 networking/stream_client.h
