@@ -263,6 +263,66 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/RemoteControllerAPI_Client.dir/build.make CMakeFiles/RemoteControllerAPI_Client.dir/main.c.s
 .PHONY : main.c.s
 
+networking/authentication.o: networking/authentication.c.o
+
+.PHONY : networking/authentication.o
+
+# target to build an object file
+networking/authentication.c.o:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/authentication.c.o
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/authentication.c.o
+.PHONY : networking/authentication.c.o
+
+networking/authentication.i: networking/authentication.c.i
+
+.PHONY : networking/authentication.i
+
+# target to preprocess a source file
+networking/authentication.c.i:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/authentication.c.i
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/authentication.c.i
+.PHONY : networking/authentication.c.i
+
+networking/authentication.s: networking/authentication.c.s
+
+.PHONY : networking/authentication.s
+
+# target to generate assembly for a file
+networking/authentication.c.s:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/authentication.c.s
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/authentication.c.s
+.PHONY : networking/authentication.c.s
+
+networking/client_info.o: networking/client_info.c.o
+
+.PHONY : networking/client_info.o
+
+# target to build an object file
+networking/client_info.c.o:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/client_info.c.o
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/client_info.c.o
+.PHONY : networking/client_info.c.o
+
+networking/client_info.i: networking/client_info.c.i
+
+.PHONY : networking/client_info.i
+
+# target to preprocess a source file
+networking/client_info.c.i:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/client_info.c.i
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/client_info.c.i
+.PHONY : networking/client_info.c.i
+
+networking/client_info.s: networking/client_info.c.s
+
+.PHONY : networking/client_info.s
+
+# target to generate assembly for a file
+networking/client_info.c.s:
+	$(MAKE) -f CMakeFiles/RC_Client_Lib_Static.dir/build.make CMakeFiles/RC_Client_Lib_Static.dir/networking/client_info.c.s
+	$(MAKE) -f CMakeFiles/RC_Client_Lib.dir/build.make CMakeFiles/RC_Client_Lib.dir/networking/client_info.c.s
+.PHONY : networking/client_info.c.s
+
 networking/conn_socket.o: networking/conn_socket.c.o
 
 .PHONY : networking/conn_socket.o
@@ -546,6 +606,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... networking/authentication.o"
+	@echo "... networking/authentication.i"
+	@echo "... networking/authentication.s"
+	@echo "... networking/client_info.o"
+	@echo "... networking/client_info.i"
+	@echo "... networking/client_info.s"
 	@echo "... networking/conn_socket.o"
 	@echo "... networking/conn_socket.i"
 	@echo "... networking/conn_socket.s"

@@ -8,7 +8,7 @@
 #include "conn_socket.h"
 #include "generic_client.h"
 
-typedef result_t (*connection_handler_t)(sock_fd_t);
+typedef result_t (*connection_handler_t)(client_info_t *, sock_fd_t);
 
 result_t create_stream_conn(client_info_t *client_info, connection_handler_t conn_handler);
 result_t create_datagram_conn(client_info_t *client_info, connection_handler_t conn_handler);

@@ -6,11 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/./networking/generic_client.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/./networking/client_info.h
 ../../networking/common/network_types.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/common/network_types.h
 ../../common/types.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/common/types.h
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/./networking/generic_client.h
+../../common/types.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/common/types.h
+client_info.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/./networking/client_info.h
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/client.h
 ../networking/helpers/address_helper.h
@@ -25,6 +31,8 @@ pthread.h
 -
 stdio.h
 -
+unistd.h
+-
 client.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/client.h
 test/test_client.h
@@ -37,6 +45,12 @@ networking/datagram_client.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.h
 config.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/config.h
+
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/client_info.h
+../../networking/common/network_types.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/networking/common/network_types.h
+../../common/types.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/types.h
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/conn_socket.h
 ../../networking/helpers/address_helper.h
@@ -59,10 +73,10 @@ generic_client.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.h
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/generic_client.h
-../../networking/common/network_types.h
-/Users/michzio/Developer/MyProjects/BachelorDegree/c/networking/common/network_types.h
 ../../common/types.h
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/types.h
+client_info.h
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/client_info.h
 
 /Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/stream_client.h
 ../../networking/helpers/address_helper.h

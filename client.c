@@ -4,19 +4,14 @@
 
 #include <stdio.h>
 #include <unistd.h>
-#include <netdb.h>
 #include <string.h>
 #include <errno.h>
 #include "client.h"
-#include "networking/stream_client.h"
-#include "networking/datagram_client.h"
+#include "../networking/common/network_types.h"
 
 result_t start_client(client_t client, client_info_t *client_info) {
 
-    client(client_info);
-
-    return SUCCESS;
-
+    return client(client_info);
 }
 
 result_t end_client(client_info_t *client_info) {
@@ -25,8 +20,13 @@ result_t end_client(client_info_t *client_info) {
 
     if(close(cs_fd) < 0) {
         fprintf(stderr, "close: %s\n", strerror(errno));
+        // publish connection error event
+        client_info_connection_error_event(client_info, CONN_ERROR_CLOSE, strerror(errno));
         return FAILURE;
     }
+
+    // publish connection end event
+    client_info_connection_end_event(client_info);
 
     return SUCCESS;
 }

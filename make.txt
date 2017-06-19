@@ -40,7 +40,7 @@ else
 endif
 
 # source files 
-SOURCE_FILES = conn_socket.o connection.o datagram_client.o generic_client.o service.o stream_client.o client.o
+SOURCE_FILES = authentication.o client_info.o conn_socket.o connection.o datagram_client.o generic_client.o service.o stream_client.o client.o
 
 # test source files 
 TEST_SOURCE_FILES = test_client.o test_transfer.o test_transfer_osx.o
@@ -69,6 +69,12 @@ $(TARGET): $(LIBRARY) $(TEST_SOURCE_FILES)
 
 $(LIBRARY): $(SOURCE_FILES) 
 	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/*.o
+
+authentication.o: networking/authentication.c networking/authentication.h
+	$(CC) $(CFLAGS) -c networking/authentication.c -o $(OUTPUT_DIR)/authentication.o
+
+client_info.o: networking/client_info.c networking/client_info.h
+	$(CC) $(CFLAGS) -c networking/client_info.c -o $(OUTPUT_DIR)/client_info.o
 
 conn_socket.o: networking/conn_socket.c networking/conn_socket.h
 	$(CC) $(CFLAGS) -c networking/conn_socket.c -o $(OUTPUT_DIR)/conn_socket.o

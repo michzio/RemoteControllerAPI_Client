@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/client.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/client.c.o"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/authentication.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/authentication.c.o"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/client_info.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/client_info.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/conn_socket.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/conn_socket.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/connection.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o"
   "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/datagram_client.c" "/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o"

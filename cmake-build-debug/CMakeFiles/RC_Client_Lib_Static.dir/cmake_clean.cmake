@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/RC_Client_Lib_Static.dir/client.c.o"
+  "CMakeFiles/RC_Client_Lib_Static.dir/networking/authentication.c.o"
+  "CMakeFiles/RC_Client_Lib_Static.dir/networking/client_info.c.o"
   "CMakeFiles/RC_Client_Lib_Static.dir/networking/conn_socket.c.o"
   "CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o"
   "CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o"

@@ -228,6 +228,22 @@
 		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/main.c">
 			<Option target="RemoteControllerAPI_Client"/>
 		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/authentication.c">
+			<Option target="RC_Client_Lib_Static"/>
+			<Option target="RC_Client_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/authentication.h">
+			<Option target="RC_Client_Lib_Static"/>
+			<Option target="RC_Client_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/client_info.c">
+			<Option target="RC_Client_Lib_Static"/>
+			<Option target="RC_Client_Lib"/>
+		</Unit>
+		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/client_info.h">
+			<Option target="RC_Client_Lib_Static"/>
+			<Option target="RC_Client_Lib"/>
+		</Unit>
 		<Unit filename="/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/networking/conn_socket.c">
 			<Option target="RC_Client_Lib_Static"/>
 			<Option target="RC_Client_Lib"/>
