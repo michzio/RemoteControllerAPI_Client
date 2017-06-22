@@ -35,10 +35,21 @@ result_t authenticate_client_on_server(const client_info_t *client_info, const s
     }
 
     // create client authentication response
-    // ID <client_identity> PASS <security_password>
+    // OS <client_os> ID <client_identity> PASS <security_password>
+    const char *client_os = client_info_client_os(client_info);
+    if( client_os != NULL ) {
+        strcpy(buf, "OS ");
+        strcat(buf, client_os);
+    } else {
+        fprintf(stderr, "Client OS not specified. Could not proceed authentication.");
+        // publish connection error event
+        client_info_connection_error_event(client_info, CONN_ERROR_AUTH, "Client OS not specified. Could not proceed authentication.");
+        return FAILURE;
+    }
+
     const char *client_identity = client_info_client_identity(client_info);
     if( client_identity != NULL ) {
-        strcpy(buf, "ID ");
+        strcat(buf, " ID ");
         strcat(buf, client_identity);
     } else {
         fprintf(stderr, "Client identity not specified. Could not proceed authentication.\n");

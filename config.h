@@ -6,7 +6,7 @@
 #define REMOTECONTROLLERAPI_CLIENT_CONFIG_H
 
 #define CLIENT_PORT "0" // the port remote controller client will be bound to if there is explicit binding (0 means any port)
-#define SERVER_PORT "63067" // the port remote controller client will be connecting to server
+#define SERVER_PORT "56440" // the port remote controller client will be connecting to server
 #define SERVER_ADDRESS "192.168.8.100"
 
 #define TEST_SERVER_ADDRESS "0.0.0.0"

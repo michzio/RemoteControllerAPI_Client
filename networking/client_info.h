@@ -29,6 +29,7 @@ void client_info_set_conn_ip(client_info_t *info, const char *ip);
 void client_info_set_sock(client_info_t *info, const sock_fd_t sockfd);
 void client_info_set_security_password(client_info_t *info, const char *password);
 void client_info_set_client_identity(client_info_t *info, const char *identity);
+void client_info_set_client_os(client_info_t *info, const char *os);
 result_t client_info_fill(client_info_t *info, const sock_fd_t sockfd);
 result_t client_info_fill_pasv(client_info_t *info, const sock_fd_t sockfd);
 result_t client_info_fill_conn(client_info_t *info, const sock_fd_t sockfd);
@@ -40,6 +41,7 @@ const char *client_info_conn_ip(const client_info_t *info);
 const sock_fd_t client_info_sock(const client_info_t *info);
 const char *client_info_security_password(const client_info_t *info);
 const char *client_info_client_identity(const client_info_t *info);
+const char *client_info_client_os(const client_info_t *info);
 
 // set event handlers (callbacks)
 void client_info_set_connection_start_callback(client_info_t *info, connection_start_callback_t callback);

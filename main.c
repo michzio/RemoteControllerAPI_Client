@@ -43,8 +43,9 @@ int main(int argc, char **argv) {
     //client_info_set_pasv_ip();
     client_info_set_conn_port(client_info, SERVER_PORT);
     client_info_set_conn_ip(client_info, SERVER_ADDRESS);
-    client_info_set_client_identity(client_info, "TO JA");
-    client_info_set_security_password(client_info, "PaSSword12!");
+    client_info_set_client_os(client_info, "iOS");
+    client_info_set_client_identity(client_info, "Michal's Phone");
+    //client_info_set_security_password(client_info, "PaSSword12!");
     //client_info_set_sock();
     //client_info_pasv_port();
     //client_info_pasv_ip();

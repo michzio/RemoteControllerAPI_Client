@@ -17,6 +17,7 @@ struct client_info {
     sock_fd_t sockfd;           // client socket
     char *security_password;    // password required to authenticate client on the server
     char *client_identity;      // client identity to authenticate client on the server
+    char *client_os;            // client operating system to authenticate client on the server
 
     // client events callbacks
     connection_start_callback_t connection_start_callback;
@@ -44,6 +45,7 @@ void client_info_init(client_info_t **info) {
     (*info)->sockfd = 0;
     (*info)->security_password = NULL;
     (*info)->client_identity = NULL;
+    (*info)->client_os = NULL;
 
     (*info)->connection_start_callback = NULL;
     (*info)->connection_authenticated_callback = NULL;
@@ -112,6 +114,11 @@ void client_info_set_security_password(client_info_t *info, const char *password
 void client_info_set_client_identity(client_info_t *info, const char *identity) {
 
     info->client_identity = identity;
+}
+
+void client_info_set_client_os(client_info_t *info, const char *os) {
+
+    info->client_os = os;
 }
 
 result_t client_info_fill(client_info_t *info, const sock_fd_t sockfd) {
@@ -214,6 +221,11 @@ const char *client_info_security_password(const client_info_t *info) {
 const char *client_info_client_identity(const client_info_t *info) {
 
     return info->client_identity;
+}
+
+const char *client_info_client_os(const client_info_t *info) {
+
+    return info->client_os;
 }
 
 // set event handlers (callbacks)
@@ -345,6 +357,7 @@ void client_info_free(client_info_t *info) {
 
     info->security_password = NULL;
     info->client_identity = NULL;
+    info->client_os = NULL;
 
     // set callbacks to NULL
     info->connection_start_callback = NULL;
