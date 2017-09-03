@@ -6,13 +6,13 @@
 #include <stdlib.h>
 #include <memory.h>
 #include "test_transfer.h"
-#include "../networking/connection.h"
-#include "../client.h"
-#include "../../networking/transfer/integer_transfer.h"
-#include "../../networking/transfer/str_transfer.h"
-#include "../../networking/transfer/binary_transfer.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
+#include "networking/connection.h"
+#include "client.h"
+#include "transfer/integer_transfer.h"
+#include "transfer/str_transfer.h"
+#include "transfer/binary_transfer.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
 
 
 #ifdef __APPLE__

@@ -15,16 +15,18 @@ AR = ar rcs
 CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99 
 
 # libraries 
-# custom 
-NETWORKING_INCL_DIR = ../networking
-COMMON_FUNCTIONS_INCL_DIR = ../common
-COMPARERS_INCL_DIR = ../comparers
-UNIT_TESTS_INCL_DIR = ../unit_tests
+# custom
+NETWORKING_LIB_DIR=../networking/outputs/debug/lib
+NETWORKING_STATIC_LIB_PATH=$(NETWORKING_LIB_DIR)/libnetworking.a
+COMMON_FUNCTIONS_LIB_DIR=../common/outputs/debug/lib
+COMMON_FUNCTIONS_STATIC_LIB_PATH=$(COMMON_FUNCTIONS_LIB_DIR)/libcommon_functions.a
+# executable's libraries
+COMPARERS_STATIC_LIB_PATH=../comparers/outputs/debug/lib/libcomparers.a
+UNIT_TESTS_STATIC_LIB_PATH=../unit_tests/outputs/debug/lib/libunit_tests.a
 
-NETWORKING_LIBRARY = $(NETWORKING_INCL_DIR)/output/debug/lib/static/libnetworking.a
-COMMON_FUNCTIONS_LIBRARY = $(COMMON_FUNCTIONS_INCL_DIR)/output/debug/lib/static/libcommon_functions.a
-COMPARERS_LIBRARY = $(COMPARERS_INCL_DIR)/output/debug/lib/static/libcomparers.a
-UNIT_TESTS_LIBRARY = $(UNIT_TESTS_INCL_DIR)/output/debug/lib/static/libunit_tests.a
+# include directories
+INCLUDE_DIRS= ./include ../comparers/include ../unit_tests/include ../networking/include ../common/include ../common/libraries
+CFLAGS+= $(foreach d, $(INCLUDE_DIRS), -I$d)
 
 # the build target executable: 
 TARGET = rc_client
@@ -45,66 +47,70 @@ SOURCE_FILES = authentication.o client_info.o conn_socket.o connection.o datagra
 # test source files 
 TEST_SOURCE_FILES = test_client.o test_transfer.o test_transfer_osx.o
 
-# output directories 
-OUTPUT_DIR = output/debug
-OUTPUT_LIB_DIR = $(OUTPUT_DIR)/lib
-OUTPUT_STATIC_LIB_DIR = $(OUTPUT_LIB_DIR)/static
-OUTPUT_BIN_DIR = $(OUTPUT_DIR)/bin
-OUTPUT_TEST_DIR = $(OUTPUT_DIR)/test
+# outputs directories
+OUTPUTS_DIR = outputs/debug
+OUTPUTS_LIB_DIR = $(OUTPUTS_DIR)/lib
+OUTPUTS_BIN_DIR = $(OUTPUTS_DIR)/bin
+OUTPUTS_TEST_DIR = $(OUTPUTS_DIR)/test
 
 all: directories libraries $(TARGET)
 
-# make output directories
+# make outputs directories
 directories: 
-	@mkdir -p $(OUTPUT_DIR)
-	@mkdir -p $(OUTPUT_LIB_DIR)
-	@mkdir -p $(OUTPUT_STATIC_LIB_DIR)
-	@mkdir -p $(OUTPUT_BIN_DIR)
-	@mkdir -p $(OUTPUT_TEST_DIR)
+	@mkdir -p $(OUTPUTS_DIR)
+	@mkdir -p $(OUTPUTS_LIB_DIR)
+	@mkdir -p $(OUTPUTS_BIN_DIR)
+	@mkdir -p $(OUTPUTS_TEST_DIR)
 
-libraries: $(LIBRARY)
+libraries: $(LIBRARY) $(SHARED_LIBRARY) $(DYNAMIC_LIBRARY)
 
 $(TARGET): $(LIBRARY) $(TEST_SOURCE_FILES)	
-	$(CC) $(CFLAGS) -o $(OUTPUT_BIN_DIR)/$(TARGET) main.c $(OUTPUT_TEST_DIR)/*.o $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(NETWORKING_LIBRARY) $(COMMON_FUNCTIONS_LIBRARY) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY)
+	$(CC) $(CFLAGS) -o $(OUTPUTS_BIN_DIR)/$(TARGET) src/main.c $(OUTPUTS_TEST_DIR)/*.o $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(NETWORKING_STATIC_LIB_PATH) $(COMMON_FUNCTIONS_STATIC_LIB_PATH) $(COMPARERS_STATIC_LIB_PATH) $(UNIT_TESTS_STATIC_LIB_PATH)
+
+$(SHARED_LIBRARY): $(SOURCE_FILES)
+	$(CC) $(CFLAGS) -L$(NETWORKING_LIB_DIR) -L$(COMMON_FUNCTIONS_LIB_DIR) -shared -o $(OUTPUTS_LIB_DIR)/$(SHARED_LIBRARY) $(OUTPUTS_DIR)/*.o -lnetworking -lcommon_functions
+
+$(DYNAMIC_LIBRARY): $(SOURCE_FILES)
+	$(CC) $(CFLAGS) -L$(NETWORKING_LIB_DIR) -L$(COMMON_FUNCTIONS_LIB_DIR) -dynamiclib -o $(OUTPUTS_LIB_DIR)/$(DYNAMIC_LIBRARY) $(OUTPUTS_DIR)/*.o -lnetworking -lcommon_functions
 
 $(LIBRARY): $(SOURCE_FILES) 
-	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/*.o
+	$(AR) $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(OUTPUTS_DIR)/*.o
 
-authentication.o: networking/authentication.c networking/authentication.h
-	$(CC) $(CFLAGS) -c networking/authentication.c -o $(OUTPUT_DIR)/authentication.o
+authentication.o: src/networking/authentication.c include/networking/authentication.h
+	$(CC) $(CFLAGS) -c src/networking/authentication.c -o $(OUTPUTS_DIR)/authentication.o
 
-client_info.o: networking/client_info.c networking/client_info.h
-	$(CC) $(CFLAGS) -c networking/client_info.c -o $(OUTPUT_DIR)/client_info.o
+client_info.o: src/networking/client_info.c include/networking/client_info.h
+	$(CC) $(CFLAGS) -c src/networking/client_info.c -o $(OUTPUTS_DIR)/client_info.o
 
-conn_socket.o: networking/conn_socket.c networking/conn_socket.h
-	$(CC) $(CFLAGS) -c networking/conn_socket.c -o $(OUTPUT_DIR)/conn_socket.o
+conn_socket.o: src/networking/conn_socket.c include/networking/conn_socket.h
+	$(CC) $(CFLAGS) -c src/networking/conn_socket.c -o $(OUTPUTS_DIR)/conn_socket.o
 
-connection.o: networking/connection.c networking/connection.h
-	$(CC) $(CFLAGS) -c networking/connection.c -o $(OUTPUT_DIR)/connection.o
+connection.o: src/networking/connection.c include/networking/connection.h
+	$(CC) $(CFLAGS) -c src/networking/connection.c -o $(OUTPUTS_DIR)/connection.o
 
-datagram_client.o: networking/datagram_client.c networking/datagram_client.h
-	$(CC) $(CFLAGS) -c networking/datagram_client.c -o $(OUTPUT_DIR)/datagram_client.o
+datagram_client.o: src/networking/datagram_client.c include/networking/datagram_client.h
+	$(CC) $(CFLAGS) -c src/networking/datagram_client.c -o $(OUTPUTS_DIR)/datagram_client.o
 
-generic_client.o: networking/generic_client.c networking/generic_client.h
-	$(CC) $(CFLAGS) -c networking/generic_client.c -o $(OUTPUT_DIR)/generic_client.o
+generic_client.o: src/networking/generic_client.c include/networking/generic_client.h
+	$(CC) $(CFLAGS) -c src/networking/generic_client.c -o $(OUTPUTS_DIR)/generic_client.o
 
-service.o: networking/service.c networking/service.h
-	$(CC) $(CFLAGS) -c networking/service.c -o $(OUTPUT_DIR)/service.o
+service.o: src/networking/service.c include/networking/service.h
+	$(CC) $(CFLAGS) -c src/networking/service.c -o $(OUTPUTS_DIR)/service.o
 
-stream_client.o: networking/stream_client.c networking/stream_client.h
-	$(CC) $(CFLAGS) -c networking/stream_client.c -o $(OUTPUT_DIR)/stream_client.o
+stream_client.o: src/networking/stream_client.c include/networking/stream_client.h
+	$(CC) $(CFLAGS) -c src/networking/stream_client.c -o $(OUTPUTS_DIR)/stream_client.o
 
-client.o: client.c client.h
-	$(CC) $(CFLAGS) -c client.c -o $(OUTPUT_DIR)/client.o
+client.o: src/client.c include/client.h
+	$(CC) $(CFLAGS) -c src/client.c -o $(OUTPUTS_DIR)/client.o
 
 test_client.o: test/test_client.c test/test_client.h
-	$(CC) $(CFLAGS) -c test/test_client.c -o $(OUTPUT_TEST_DIR)/test_client.o
+	$(CC) $(CFLAGS) -c test/test_client.c -o $(OUTPUTS_TEST_DIR)/test_client.o
 
 test_transfer.o: test/test_transfer.c test/test_transfer.h
-	$(CC) $(CFLAGS) -c test/test_transfer.c -o $(OUTPUT_TEST_DIR)/test_transfer.o
+	$(CC) $(CFLAGS) -c test/test_transfer.c -o $(OUTPUTS_TEST_DIR)/test_transfer.o
 
 test_transfer_osx.o: test/test_transfer_osx.c test/test_transfer.h
-	$(CC) $(CFLAGS) -c test/test_transfer_osx.c -o $(OUTPUT_TEST_DIR)/test_transfer_osx.o
+	$(CC) $(CFLAGS) -c test/test_transfer_osx.c -o $(OUTPUTS_TEST_DIR)/test_transfer_osx.o
 
 clean:
-	$(RM) -rf $(OUTPUT_DIR)
+	$(RM) -rf $(OUTPUTS_DIR)

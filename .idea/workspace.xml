@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../server/src/networking/service.c" description="} else if(strncmp(request, &quot;player&quot;, 6) == 0) {" line="99" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="RemoteControllerAPI_Client" targetName="Install_RemoteControllerAPI_Client" />
+      <config projectName="RemoteControllerAPI_Client" targetName="Common_Functions_Lib" />
+      <config projectName="RemoteControllerAPI_Client" targetName="Networking_Lib" />
+      <config projectName="RemoteControllerAPI_Client" targetName="zlib_1_2_8" />
       <config projectName="RemoteControllerAPI_Client" targetName="RC_Client_Lib_Static" />
-      <config projectName="RemoteControllerAPI_Client" targetName="RemoteControllerAPI_Client" />
+      <config projectName="RemoteControllerAPI_Client" targetName="zlib_Lib" />
       <config projectName="RemoteControllerAPI_Client" targetName="RC_Client_Lib" />
+      <config projectName="RemoteControllerAPI_Client" targetName="libpng_Lib_Static" />
+      <config projectName="RemoteControllerAPI_Client" targetName="RemoteControllerAPI_Client" />
+      <config projectName="RemoteControllerAPI_Client" targetName="Networking" />
+      <config projectName="RemoteControllerAPI_Client" targetName="libpng_Lib" />
+      <config projectName="RemoteControllerAPI_Client" targetName="libpng_1_6_24" />
+      <config projectName="RemoteControllerAPI_Client" targetName="Common_Functions_Lib_Static" />
+      <config projectName="RemoteControllerAPI_Client" targetName="zlib_Lib_Static" />
+      <config projectName="RemoteControllerAPI_Client" targetName="Common_Functions" />
+      <config projectName="RemoteControllerAPI_Client" targetName="Networking_Lib_Static" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -15,15 +29,568 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d812bbe-4078-40ca-b703-a8a06dd9afd8" name="Default" comment="CMakeLists.txt - updated to support Windows Cygwin build &#10;make.txt - updated to support Windows Cygwin build">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/unix/bin/rc_client" afterPath="$PROJECT_DIR$/output/unix/bin/rc_client" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/unix/lib/librc_client.dylib" afterPath="$PROJECT_DIR$/output/unix/lib/librc_client.dylib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/unix/lib/static/librc_client.a" afterPath="$PROJECT_DIR$/output/unix/lib/static/librc_client.a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../common/outputs/lib/apple/libcommon_functions.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../libpng-1.6.24/outputs/lib/apple/liblibpng.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../networking/outputs/lib/apple/libnetworking.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../zlib-1.2.8/outputs/lib/apple/libzlib.dylib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/arm/arm_init.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/arm/filter_neon.S" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/arm/filter_neon_intrinsics.c" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/authentication.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/client_info.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/conn_socket.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/connection.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/datagram_client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/generic_client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/service.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/networking/stream_client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/authentication.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/client_info.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/conn_socket.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/connection.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/datagram_client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/generic_client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/service.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/networking/stream_client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/main.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/test/test_client.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/authentication.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/bin/rc_client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/bin/rc_client.dSYM/Contents/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/bin/rc_client.dSYM/Contents/Resources/DWARF/rc_client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/client_info.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/conn_socket.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/connection.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/datagram_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/generic_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/lib/static/librc_client.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/service.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/stream_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/test/test_client.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/test/test_transfer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/debug/test/test_transfer_osx.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/unix/bin/rc_client" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/unix/lib/librc_client.dylib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output/unix/lib/static/librc_client.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/main.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/array_helper.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/base64.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/bitmaps.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/bitwise.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/numbers.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/strings.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/system.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/types.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/array_helper.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/base64.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/bin/common_functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/bin/common_functions.dSYM/Contents/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/bin/common_functions.dSYM/Contents/Resources/DWARF/common_functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/bitmaps.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/bitwise.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/lz4.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/md5.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/numbers.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/png-decoding.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/png-encoding.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/png-helper.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/strings.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/system.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_array_helper.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_bitwise.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_lz4.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_md5.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_numbers.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_opencv.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_png_decoding.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_png_encoding.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/test/test_strings.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/debug/types.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/unix/bin/common_functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/output/unix/lib/libcommon_functions.dylib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../common/outputs/lib/apple/static/libcommon_functions.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/main.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/png.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngerror.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngget.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngmem.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngpread.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngread.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngrio.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngrtran.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngrutil.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngset.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngtest.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngtrans.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngwio.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngwrite.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngwtran.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/pngwutil.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/png.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngerror.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngget.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngmem.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngpread.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngread.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngrio.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngrtran.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngrutil.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngset.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngtest.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngtrans.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngwio.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngwrite.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngwtran.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/pngwutil.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/bin/libpng" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/bin/libpng.dSYM/Contents/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/bin/libpng.dSYM/Contents/Resources/DWARF/libpng" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/lib/static/liblibpng.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/png.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngerror.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngget.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngmem.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngpread.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngread.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngrio.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngrtran.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngrutil.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngset.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngtest.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngtrans.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngwio.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngwrite.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngwtran.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/debug/pngwutil.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/unix/bin/libpng" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/output/unix/lib/liblibpng.dylib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/outputs/lib/apple/liblibpng.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/main.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/common/endianness.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/helpers/address_helper.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/helpers/io_helper.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/transfer/binary_transfer.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/transfer/integer_transfer.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/transfer/str_transfer.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/common/endianness.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/helpers/address_helper.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/helpers/io_helper.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/transfer/binary_transfer.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/transfer/integer_transfer.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/transfer/str_transfer.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/address_helper.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/bin/networking" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/bin/networking.dSYM/Contents/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/bin/networking.dSYM/Contents/Resources/DWARF/networking" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/binary_transfer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/endianness.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/integer_transfer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/io_helper.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/lib/static/libnetworking.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/str_transfer.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/debug/test/test_endianness.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/unix/bin/networking" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../networking/output/unix/lib/static/libnetworking.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/main.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/adler32.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/compress.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/crc32.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/deflate.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/gzclose.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/gzlib.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/gzread.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/gzwrite.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/infback.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/inffast.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/inflate.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/inftrees.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/trees.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/uncompr.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/zutil.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/adler32.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/compress.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/crc32.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/deflate.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/gzclose.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/gzlib.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/gzread.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/gzwrite.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/infback.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/inffast.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/inflate.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/inftrees.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/trees.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/uncompr.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/zutil.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/adler32.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/bin/zlib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/bin/zlib.dSYM/Contents/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/bin/zlib.dSYM/Contents/Resources/DWARF/zlib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/compress.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/crc32.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/deflate.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/gzclose.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/gzlib.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/gzread.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/gzwrite.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/infback.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/inffast.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/inflate.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/inftrees.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/lib/static/libzlib.a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/trees.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/debug/zutil.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/output/unix/bin/zlib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/outputs/lib/apple/libzlib.a" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client.c" afterPath="$PROJECT_DIR$/src/client.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client.h" afterPath="$PROJECT_DIR$/include/client.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/config.h" afterPath="$PROJECT_DIR$/include/config.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/src/main.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/authentication.c" afterPath="$PROJECT_DIR$/src/networking/authentication.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/authentication.h" afterPath="$PROJECT_DIR$/include/networking/authentication.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/client_info.c" afterPath="$PROJECT_DIR$/src/networking/client_info.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/client_info.h" afterPath="$PROJECT_DIR$/include/networking/client_info.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/conn_socket.c" afterPath="$PROJECT_DIR$/src/networking/conn_socket.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/conn_socket.h" afterPath="$PROJECT_DIR$/include/networking/conn_socket.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/connection.c" afterPath="$PROJECT_DIR$/src/networking/connection.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/connection.h" afterPath="$PROJECT_DIR$/include/networking/connection.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/datagram_client.c" afterPath="$PROJECT_DIR$/src/networking/datagram_client.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/datagram_client.h" afterPath="$PROJECT_DIR$/include/networking/datagram_client.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/generic_client.c" afterPath="$PROJECT_DIR$/src/networking/generic_client.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/generic_client.h" afterPath="$PROJECT_DIR$/include/networking/generic_client.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/service.c" afterPath="$PROJECT_DIR$/src/networking/service.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/service.h" afterPath="$PROJECT_DIR$/include/networking/service.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/stream_client.c" afterPath="$PROJECT_DIR$/src/networking/stream_client.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/networking/stream_client.h" afterPath="$PROJECT_DIR$/include/networking/stream_client.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/array_helper.c" afterPath="$PROJECT_DIR$/../common/src/array_helper.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/array_helper.h" afterPath="$PROJECT_DIR$/../common/include/array_helper.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/base64.c" afterPath="$PROJECT_DIR$/../common/src/base64.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/base64.h" afterPath="$PROJECT_DIR$/../common/include/base64.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/bitmaps.c" afterPath="$PROJECT_DIR$/../common/src/bitmaps.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/bitmaps.h" afterPath="$PROJECT_DIR$/../common/include/bitmaps.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/bitwise.c" afterPath="$PROJECT_DIR$/../common/src/bitwise.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/bitwise.h" afterPath="$PROJECT_DIR$/../common/include/bitwise.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/main.c" afterPath="$PROJECT_DIR$/../common/src/main.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/numbers.c" afterPath="$PROJECT_DIR$/../common/src/numbers.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/numbers.h" afterPath="$PROJECT_DIR$/../common/include/numbers.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/strings.c" afterPath="$PROJECT_DIR$/../common/src/strings.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/strings.h" afterPath="$PROJECT_DIR$/../common/include/strings.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/system.c" afterPath="$PROJECT_DIR$/../common/src/system.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/system.h" afterPath="$PROJECT_DIR$/../common/include/system.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/types.c" afterPath="$PROJECT_DIR$/../common/src/types.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/types.h" afterPath="$PROJECT_DIR$/../common/include/types.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../common/video.h" afterPath="$PROJECT_DIR$/../common/include/video.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/main.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/main.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/png.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/png.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/png.h" afterPath="$PROJECT_DIR$/../libpng-1.6.24/include/png.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngconf.h" afterPath="$PROJECT_DIR$/../libpng-1.6.24/include/pngconf.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngdebug.h" afterPath="$PROJECT_DIR$/../libpng-1.6.24/include/pngdebug.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngerror.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngerror.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngget.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngget.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pnginfo.h" afterPath="$PROJECT_DIR$/../libpng-1.6.24/include/pnginfo.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pnglibconf.h" afterPath="$PROJECT_DIR$/../libpng-1.6.24/include/pnglibconf.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngmem.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngmem.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngpread.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngpread.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngpriv.h" afterPath="$PROJECT_DIR$/../libpng-1.6.24/include/pngpriv.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngread.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngread.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngrio.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngrio.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngrtran.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngrtran.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngrutil.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngrutil.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngset.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngset.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngstruct.h" afterPath="$PROJECT_DIR$/../libpng-1.6.24/include/pngstruct.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngtest.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngtest.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngtrans.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngtrans.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngwio.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngwio.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngwrite.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngwrite.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngwtran.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngwtran.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../libpng-1.6.24/pngwutil.c" afterPath="$PROJECT_DIR$/../libpng-1.6.24/src/pngwutil.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/common/endianness.c" afterPath="$PROJECT_DIR$/../networking/src/common/endianness.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/common/endianness.h" afterPath="$PROJECT_DIR$/../networking/include/common/endianness.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/common/network_types.h" afterPath="$PROJECT_DIR$/../networking/include/common/network_types.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/helpers/address_helper.c" afterPath="$PROJECT_DIR$/../networking/src/helpers/address_helper.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/helpers/address_helper.h" afterPath="$PROJECT_DIR$/../networking/include/helpers/address_helper.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/helpers/io_helper.c" afterPath="$PROJECT_DIR$/../networking/src/helpers/io_helper.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/helpers/io_helper.h" afterPath="$PROJECT_DIR$/../networking/include/helpers/io_helper.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/main.c" afterPath="$PROJECT_DIR$/../networking/src/main.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/transfer/binary_transfer.c" afterPath="$PROJECT_DIR$/../networking/src/transfer/binary_transfer.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/transfer/binary_transfer.h" afterPath="$PROJECT_DIR$/../networking/include/transfer/binary_transfer.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/transfer/integer_transfer.c" afterPath="$PROJECT_DIR$/../networking/src/transfer/integer_transfer.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/transfer/integer_transfer.h" afterPath="$PROJECT_DIR$/../networking/include/transfer/integer_transfer.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/transfer/str_transfer.c" afterPath="$PROJECT_DIR$/../networking/src/transfer/str_transfer.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../networking/transfer/str_transfer.h" afterPath="$PROJECT_DIR$/../networking/include/transfer/str_transfer.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/adler32.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/adler32.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/compress.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/compress.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/crc32.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/crc32.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/crc32.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/crc32.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/deflate.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/deflate.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/deflate.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/deflate.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/gzclose.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/gzclose.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/gzguts.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/gzguts.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/gzlib.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/gzlib.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/gzread.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/gzread.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/gzwrite.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/gzwrite.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/infback.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/infback.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/inffast.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/inffast.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/inffast.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/inffast.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/inffixed.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/inffixed.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/inflate.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/inflate.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/inflate.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/inflate.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/inftrees.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/inftrees.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/inftrees.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/inftrees.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/main.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/main.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/trees.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/trees.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/trees.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/trees.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/uncompr.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/uncompr.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/zconf.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/zconf.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/zlib.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/zlib.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/zutil.c" afterPath="$PROJECT_DIR$/../zlib-1.2.8/src/zutil.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../zlib-1.2.8/zutil.h" afterPath="$PROJECT_DIR$/../zlib-1.2.8/include/zutil.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/rc_client" afterPath="$PROJECT_DIR$/cmake-build-debug/rc_client" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_array_helper.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_array_helper.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_opencv.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_opencv.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_png_decoding.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_png_decoding.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_png_encoding.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/test/test_png_encoding.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/libraries/png/png-decoding.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/libraries/png/png-decoding.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/libraries/png/png-encoding.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/libraries/png/png-encoding.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/libraries/png/png-helper.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/libraries/png/png-helper.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-decoding.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-decoding.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-encoding.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-encoding.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-helper.c.o" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-helper.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/common_functions" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/common_functions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/libcommon_functions.a" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/libcommon_functions.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/libcommon_functions.dylib" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/libcommon_functions.dylib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/libnetworking.a" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/libnetworking.a" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/libnetworking.dylib" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/libnetworking.dylib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/networking" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/networking" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.h" afterPath="$PROJECT_DIR$/config.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networking/authentication.c" afterPath="$PROJECT_DIR$/networking/authentication.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networking/client_info.c" afterPath="$PROJECT_DIR$/networking/client_info.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networking/client_info.h" afterPath="$PROJECT_DIR$/networking/client_info.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/cmake_clean_target.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RC_Client_Lib_Static.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RemoteControllerAPI_Client.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/RemoteControllerAPI_Client.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/RemoteControllerAPI_Client.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/make.txt" afterPath="$PROJECT_DIR$/make.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_client.c" afterPath="$PROJECT_DIR$/test/test_client.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_transfer.c" afterPath="$PROJECT_DIR$/test/test_transfer.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_transfer.h" afterPath="$PROJECT_DIR$/test/test_transfer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_transfer_osx.c" afterPath="$PROJECT_DIR$/test/test_transfer_osx.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../common/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/CMakeLists.txt" afterPath="$PROJECT_DIR$/../common/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/C.includecache" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/build.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/depend.internal" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/depend.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/flags.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/link.txt" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/progress.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/C.includecache" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/build.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/depend.internal" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/depend.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/flags.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/link.txt" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/progress.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/C.includecache" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/build.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/cmake_clean_target.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/depend.internal" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/depend.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/flags.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/link.txt" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/progress.make" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Common_Functions_Lib_Static.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/Common_Functions.cbp" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/Common_Functions.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/../common/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/libraries/png/png-encoding.c" afterPath="$PROJECT_DIR$/../common/libraries/png/png-encoding.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/libraries/png/png-helper.h" afterPath="$PROJECT_DIR$/../common/libraries/png/png-helper.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/make.txt" afterPath="$PROJECT_DIR$/../common/make.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_array_helper.c" afterPath="$PROJECT_DIR$/../common/test/test_array_helper.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_bitwise.c" afterPath="$PROJECT_DIR$/../common/test/test_bitwise.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_lz4.c" afterPath="$PROJECT_DIR$/../common/test/test_lz4.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_md5.c" afterPath="$PROJECT_DIR$/../common/test/test_md5.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_numbers.c" afterPath="$PROJECT_DIR$/../common/test/test_numbers.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_opencv.c" afterPath="$PROJECT_DIR$/../common/test/test_opencv.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_png_decoding.c" afterPath="$PROJECT_DIR$/../common/test/test_png_decoding.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_png_encoding.c" afterPath="$PROJECT_DIR$/../common/test/test_png_encoding.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../common/test/test_strings.c" afterPath="$PROJECT_DIR$/../common/test/test_strings.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../libpng-1.6.24/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/CMakeLists.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/C.includecache" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/build.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/depend.internal" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/depend.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/flags.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/link.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/progress.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_1_6_24.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/C.includecache" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/build.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/depend.internal" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/depend.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/flags.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/link.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/progress.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/C.includecache" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/build.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/cmake_clean_target.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/depend.internal" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/depend.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/flags.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/link.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/progress.make" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/libpng_Lib_Static.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/libpng_1_6_24.cbp" afterPath="$PROJECT_DIR$/../libpng-1.6.24/cmake-build-debug/libpng_1_6_24.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../libpng-1.6.24/make.txt" afterPath="$PROJECT_DIR$/../libpng-1.6.24/make.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../networking/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/CMakeLists.txt" afterPath="$PROJECT_DIR$/../networking/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/C.includecache" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/build.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/depend.internal" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/depend.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/flags.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/link.txt" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/progress.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/C.includecache" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/build.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/depend.internal" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/depend.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/flags.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/link.txt" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/progress.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/C.includecache" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/build.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/cmake_clean_target.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/depend.internal" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/depend.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/flags.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/link.txt" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/progress.make" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/Networking_Lib_Static.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/Networking.cbp" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/Networking.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/../networking/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/make.txt" afterPath="$PROJECT_DIR$/../networking/make.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../networking/test/test_endianness.c" afterPath="$PROJECT_DIR$/../networking/test/test_endianness.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../zlib-1.2.8/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/CMakeLists.txt" afterPath="$PROJECT_DIR$/../zlib-1.2.8/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/C.includecache" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/build.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/depend.internal" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/depend.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/flags.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/link.txt" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/progress.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_1_2_8.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/C.includecache" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/build.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/depend.internal" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/depend.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/flags.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/link.txt" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/progress.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/C.includecache" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/build.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/cmake_clean_target.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/cmake_clean_target.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/depend.internal" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/depend.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/flags.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/link.txt" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/progress.make" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/CMakeFiles/zlib_Lib_Static.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/zlib_1_2_8.cbp" afterPath="$PROJECT_DIR$/../zlib-1.2.8/cmake-build-debug/zlib_1_2_8.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../zlib-1.2.8/make.txt" afterPath="$PROJECT_DIR$/../zlib-1.2.8/make.txt" />
     </list>
     <ignored path="client.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,64 +611,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="client_info.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networking/client_info.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="68" />
-              <folding>
-                <element signature="e#149#199#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client_info.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networking/client_info.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="227" column="27" lean-forward="false" selection-start-line="227" selection-start-column="27" selection-end-line="227" selection-end-column="27" />
-              <folding>
-                <element signature="e#50#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datagram_client.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networking/datagram_client.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.c">
+        <entry file="file://$PROJECT_DIR$/src/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+            <state relative-caret-position="225">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authentication.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/networking/authentication.c">
+      <file leaf-file-name="service.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/networking/service.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            <state relative-caret-position="367">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
-                <element signature="e#50#73#0" expanded="true" />
+                <element signature="e#50#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.h">
+      <file leaf-file-name="config.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/config.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
@@ -137,9 +670,6 @@
         <option value="$PROJECT_DIR$/networking/stream_conn.h" />
         <option value="$PROJECT_DIR$/networking/datagram_conn.h" />
         <option value="$PROJECT_DIR$/test/test_client.h" />
-        <option value="$PROJECT_DIR$/test/test_transfer.c" />
-        <option value="$PROJECT_DIR$/test/test_transfer_osx.c" />
-        <option value="$PROJECT_DIR$/make.txt" />
         <option value="$PROJECT_DIR$/client.h" />
         <option value="$PROJECT_DIR$/networking/stream_client.c" />
         <option value="$PROJECT_DIR$/networking/datagram_client.c" />
@@ -151,7 +681,6 @@
         <option value="$PROJECT_DIR$/test/test_transfer.h" />
         <option value="$PROJECT_DIR$/networking/generic_client.c" />
         <option value="$PROJECT_DIR$/networking/generic_client.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/networking/connection.h" />
         <option value="$PROJECT_DIR$/networking/service.h" />
         <option value="$PROJECT_DIR$/networking/authentication.h" />
@@ -163,6 +692,21 @@
         <option value="$PROJECT_DIR$/networking/client_info.c" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/config.h" />
+        <option value="$PROJECT_DIR$/include/networking/generic_client.h" />
+        <option value="$PROJECT_DIR$/src/client.c" />
+        <option value="$PROJECT_DIR$/src/networking/client_info.c" />
+        <option value="$PROJECT_DIR$/include/networking/connection.h" />
+        <option value="$PROJECT_DIR$/include/networking/service.h" />
+        <option value="$PROJECT_DIR$/include/networking/stream_client.h" />
+        <option value="$PROJECT_DIR$/test/test_transfer.c" />
+        <option value="$PROJECT_DIR$/test/test_transfer_osx.c" />
+        <option value="$PROJECT_DIR$/include/networking/client_info.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/make.txt" />
+        <option value="$PROJECT_DIR$/src/main.c" />
+        <option value="$PROJECT_DIR$/src/networking/authentication.c" />
+        <option value="$PROJECT_DIR$/src/networking/service.c" />
+        <option value="$PROJECT_DIR$/include/config.h" />
       </list>
     </option>
   </component>
@@ -174,10 +718,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="109" />
-    <option name="y" value="154" />
+    <option name="x" value="91" />
+    <option name="y" value="182" />
     <option name="width" value="1293" />
-    <option name="height" value="739" />
+    <option name="height" value="609" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -204,6 +748,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RemoteControllerAPI_Client" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -214,10 +772,76 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RemoteControllerAPI_Client" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="networking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RemoteControllerAPI_Client" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="outputs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RemoteControllerAPI_Client" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="outputs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,11 +855,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/helper" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include/networking" />
+      <recent name="$PROJECT_DIR$/src/networking" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/helper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,7 +878,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Install_RemoteControllerAPI_Client">
+  <component name="RunManager" selected="Application.RemoteControllerAPI_Client">
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
       <method />
     </configuration>
@@ -437,6 +1065,54 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="Common_Functions" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="Common_Functions" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RemoteControllerAPI_Client" RUN_TARGET_NAME="Common_Functions">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Common_Functions_Lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="Common_Functions_Lib" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Common_Functions_Lib_Static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="Common_Functions_Lib_Static" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="libpng_1_6_24" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="libpng_1_6_24" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RemoteControllerAPI_Client" RUN_TARGET_NAME="libpng_1_6_24">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="libpng_Lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="libpng_Lib" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="libpng_Lib_Static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="libpng_Lib_Static" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Networking" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="Networking" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RemoteControllerAPI_Client" RUN_TARGET_NAME="Networking">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Networking_Lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="Networking_Lib" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Networking_Lib_Static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="Networking_Lib_Static" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="zlib_1_2_8" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="zlib_1_2_8" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RemoteControllerAPI_Client" RUN_TARGET_NAME="zlib_1_2_8">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="zlib_Lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="zlib_Lib" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="zlib_Lib_Static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="zlib_Lib_Static" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="RemoteControllerAPI_Client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RemoteControllerAPI_Client" RUN_TARGET_NAME="RemoteControllerAPI_Client">
       <envs />
       <method />
@@ -449,16 +1125,23 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Install_RemoteControllerAPI_Client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RemoteControllerAPI_Client" TARGET_NAME="Install_RemoteControllerAPI_Client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RemoteControllerAPI_Client" RUN_TARGET_NAME="RemoteControllerAPI_Client">
-      <envs />
-      <method />
-    </configuration>
-    <list size="5">
+    <list size="16">
       <item index="0" class="java.lang.String" itemvalue="Application.RemoteControllerAPI_Client" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Build All" />
-      <item index="2" class="java.lang.String" itemvalue="Application.RC_Client_Lib" />
-      <item index="3" class="java.lang.String" itemvalue="Application.RC_Client_Lib_Static" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Install_RemoteControllerAPI_Client" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Common_Functions" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Common_Functions_Lib" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Common_Functions_Lib_Static" />
+      <item index="4" class="java.lang.String" itemvalue="Application.libpng_1_6_24" />
+      <item index="5" class="java.lang.String" itemvalue="Application.libpng_Lib" />
+      <item index="6" class="java.lang.String" itemvalue="Application.libpng_Lib_Static" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Networking" />
+      <item index="8" class="java.lang.String" itemvalue="Application.Networking_Lib" />
+      <item index="9" class="java.lang.String" itemvalue="Application.Networking_Lib_Static" />
+      <item index="10" class="java.lang.String" itemvalue="Application.zlib_1_2_8" />
+      <item index="11" class="java.lang.String" itemvalue="Application.zlib_Lib" />
+      <item index="12" class="java.lang.String" itemvalue="Application.zlib_Lib_Static" />
+      <item index="13" class="java.lang.String" itemvalue="Application.Build All" />
+      <item index="14" class="java.lang.String" itemvalue="Application.RC_Client_Lib" />
+      <item index="15" class="java.lang.String" itemvalue="Application.RC_Client_Lib_Static" />
     </list>
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -514,6 +1197,10 @@
       <workItem from="1496821796997" duration="232000" />
       <workItem from="1497816709102" duration="18739000" />
       <workItem from="1497960459496" duration="11987000" />
+      <workItem from="1498464491085" duration="2557000" />
+      <workItem from="1502354712189" duration="5411000" />
+      <workItem from="1502385778650" duration="14908000" />
+      <workItem from="1502961400310" duration="3361000" />
     </task>
     <task id="LOCAL-00001" summary="corrected initial code -&gt; client program structure">
       <created>1469111147630</created>
@@ -582,22 +1269,32 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109458000" />
+    <option name="totallyTimeSpent" value="135695000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="154" width="1293" height="739" extended-state="0" />
+    <frame x="91" y="182" width="1293" height="609" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22382094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30139104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288201" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3617021" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38794437" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38671875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2746615" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31095123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42262894" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26120555" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46615088" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -605,7 +1302,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -658,14 +1354,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/networking/authentication.c</url>
-          <line>30</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -677,22 +1366,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.h">
+    <entry file="file://$PROJECT_DIR$/include/client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="75" lean-forward="false" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
-          <folding />
+          <folding>
+            <element signature="e#19#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/conn_socket.c">
+    <entry file="file://$PROJECT_DIR$/src/networking/conn_socket.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
@@ -706,7 +1397,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/stream_client.h">
+    <entry file="file://$PROJECT_DIR$/include/networking/stream_client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
@@ -727,45 +1418,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.h">
+    <entry file="file://$PROJECT_DIR$/include/client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#19#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#19#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#19#39#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.h">
+    <entry file="file://$PROJECT_DIR$/include/client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.c">
+    <entry file="file://$PROJECT_DIR$/src/client.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -778,7 +1475,7 @@
     <entry file="file://$PROJECT_DIR$/common/address_helper.c" />
     <entry file="file://$PROJECT_DIR$/common/io_helper.c" />
     <entry file="file://$PROJECT_DIR$/common/io_helper.h" />
-    <entry file="file://$PROJECT_DIR$/../networking/transfer/integer_transfer.h">
+    <entry file="file://$PROJECT_DIR$/../networking/include/transfer/integer_transfer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
@@ -787,20 +1484,6 @@
     </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/i386/_types.h" />
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/_types/_size_t.h" />
-    <entry file="file://$PROJECT_DIR$/make.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="69" column="79" lean-forward="false" selection-start-line="69" selection-start-column="79" selection-end-line="69" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_transfer_osx.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="235" column="19" lean-forward="false" selection-start-line="235" selection-start-column="19" selection-end-line="235" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -815,13 +1498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_transfer.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_client.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -830,75 +1506,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/generic_client.c">
+    <entry file="file://$PROJECT_DIR$/src/networking/generic_client.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="141" lean-forward="false" selection-start-line="4" selection-start-column="141" selection-end-line="4" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client.h">
+    <entry file="file://$PROJECT_DIR$/include/client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/conn_socket.c">
+    <entry file="file://$PROJECT_DIR$/src/networking/conn_socket.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1041">
           <caret line="99" column="46" lean-forward="false" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/conn_socket.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/service.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/stream_client.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/stream_client.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/connection.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="56" lean-forward="false" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/authentication.h">
+    <entry file="file://$PROJECT_DIR$/include/networking/authentication.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="98" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,48 +1541,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/service.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="907">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#50#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/generic_client.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/connection.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="51" column="18" lean-forward="true" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/datagram_client.c">
+    <entry file="file://$PROJECT_DIR$/src/networking/datagram_client.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/networking/conn_socket.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="97" lean-forward="false" selection-start-line="10" selection-start-column="97" selection-end-line="10" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/networking/datagram_client.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/networking/generic_client.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/networking/stream_client.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/datagram_client.h">
+    <entry file="file://$PROJECT_DIR$/include/networking/service.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/networking/connection.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_transfer.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_transfer_osx.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/client_info.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1424">
+          <caret line="110" column="28" lean-forward="false" selection-start-line="110" selection-start-column="28" selection-end-line="110" selection-end-column="28" />
+          <folding>
+            <element signature="e#50#67#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/networking/client_info.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/make.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="52" lean-forward="false" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#51#69#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/stream_client.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="e#50#68#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/connection.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networking/authentication.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1000">
+          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/config.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
@@ -958,49 +1685,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/client_info.h">
+    <entry file="file://$PROJECT_DIR$/src/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="68" />
-          <folding>
-            <element signature="e#149#199#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/networking/client_info.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="227" column="27" lean-forward="false" selection-start-line="227" selection-start-column="27" selection-end-line="227" selection-end-column="27" />
-          <folding>
-            <element signature="e#50#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+        <state relative-caret-position="225">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networking/authentication.c">
+    <entry file="file://$PROJECT_DIR$/src/networking/service.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        <state relative-caret-position="367">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#50#73#0" expanded="true" />
+            <element signature="e#50#68#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>

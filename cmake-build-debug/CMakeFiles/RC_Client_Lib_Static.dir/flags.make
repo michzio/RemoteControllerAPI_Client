@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/../networking/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/../common/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/../common/libraries -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/../unit_tests/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/client/../comparers/include 
 

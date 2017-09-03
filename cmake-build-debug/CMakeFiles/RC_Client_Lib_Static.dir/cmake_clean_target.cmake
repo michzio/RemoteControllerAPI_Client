@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "librc_client.a"
+  "../outputs/lib/apple/librc_client.a"
 )

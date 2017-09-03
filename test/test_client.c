@@ -3,10 +3,10 @@
 //
 
 #include "test_client.h"
-#include "../networking/stream_client.h"
-#include "../networking/datagram_client.h"
-#include "../client.h"
-#include "../config.h"
+#include "../include/networking/stream_client.h"
+#include "../include/networking/datagram_client.h"
+#include "../include/client.h"
+#include "../include/config.h"
 
 static void test_stream_client(void) {
 

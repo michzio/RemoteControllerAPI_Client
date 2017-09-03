@@ -5,9 +5,9 @@
 #ifndef REMOTECONTROLLERAPI_CLIENT_TEST_TRANSFER_H
 #define REMOTECONTROLLERAPI_CLIENT_TEST_TRANSFER_H
 
-#include "../networking/connection.h"
-#include "../client.h"
-#include "../config.h"
+#include "../include/networking/connection.h"
+#include "../include/client.h"
+#include "../include/config.h"
 
 typedef struct {
     void (*run_tests)(void);

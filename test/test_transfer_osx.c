@@ -12,13 +12,13 @@
 #include <stdlib.h>
 #include <CoreServices/CoreServices.h>
 #include <CoreGraphics/CoreGraphics.h>
-#include "../../common/bitwise.h"
-#include "../../common/bitmaps.h"
-#include "../../common/libraries/lz4/lz4.h"
-#include "../../networking/transfer/binary_transfer.h"
-#include "../../networking/transfer/integer_transfer.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
+#include "bitwise.h"
+#include "bitmaps.h"
+#include "lz4/lz4.h"
+#include "transfer/binary_transfer.h"
+#include "transfer/integer_transfer.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
 
 /**
  * PNG transfer
